@@ -17,6 +17,9 @@ from nltk.tokenize.casual import TweetTokenizer
 
 class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     def __init__(self, language='spanish', lemmatize=True, stem=False, reduce_len=True, strip_handles=True, strip_urls=True, token_min_len=4, preserve_case=True, text_to_sequence=False):
+        """Un normalizador de texto pensado para procesamiento de Tweets en español. Este normalizador puede devolver o bien un texto transformado o bien una secuencia de tokens si se
+        indica el parametro `text_to_sequence`. Dentro de los procesamientos disponibles son lemmatization, stemming, reducir la longitud de caracteres repetidos, eliminar handles, 
+        eliminar URLs, eliminar mayusculas."""
         try:
             import es_core_news_sm as spa
             
@@ -42,6 +45,8 @@ class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMi
         self._text_to_sequence = text_to_sequence
     
     def process_text(self, text):
+        """Procesa una secuencia de texto de acuerdo a la configuración del normalizador. Este método
+        devuelve una secuencia de tokens."""
         tokens = self.tokenizer.tokenize(text)
         tokens = [token for token in tokens if not re.match(self.urls_regex, token)]
         tokens = [token for token in tokens if len(token) > self.token_min_len]

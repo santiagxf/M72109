@@ -21,6 +21,13 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
     UNKNOWN_WORD_TOKEN = "<UNK>"
     
     def __init__(self, model_path, sequence_to_idx=False):
+        """Permite vectorizar una secuencia de palabras utilizando un modelo entrenado y especificado en 
+        `model_path` en formato binario. Este vectorizador puede devolver o bien los indices de las palabras
+        en el vocabulario de acuerdo al modelo indicado o bien los vectores de word2vec de acuerdo esté
+        especificado en el parametro `sequence_to_idx`. Un nuevo tokens es agregado automaticamente para indicar
+        tokens que no están en el vocabulario original. El vector de este token está inicializado con un valor
+        aleatorio.
+        """
         path = os.path.abspath(model_path)
         self.embeddings = KeyedVectors.load_word2vec_format(datapath(path), binary=True)
         
@@ -32,12 +39,16 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
         self._sequence_to_idx = sequence_to_idx
         
     def get_vector(self, word):
+        """Devuelve el vector word2vec correspondiente a la palabra indicada."""
         try:
             return self.embeddings[word]
         except KeyError:
             return self.embeddings[self.UNKNOWN_WORD_TOKEN]
     
     def get_weights(self):
+        """Devuelve la matriz que representa los vectores para cada una de las palabras del vocabulario. Esta matriz tiene
+        dimensiones `vocab_size, emdedding_size`.
+        """
         # get_keras_embedding requiere tener instalado Keras, el cual es incomplatible con la version de TF de Colab
         #return self.embeddings.wv.get_keras_embedding(train_embeddings=False)
         
@@ -52,12 +63,17 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
         return wv_matrix
     
     def word2idx(self, word):
+        """Devuelve el indice correspondiente a la palabra indicada. Si la palabra no forma parte del
+        vocabulario entonces se devuelve la representación del token `UNKNOWN_WORD_TOKEN`
+        """
         try:
             return self.embeddings.wv.vocab[word].index
         except KeyError:
             return self.embeddings.wv.vocab[self.UNKNOWN_WORD_TOKEN].index
     
     def idx2word(self, idx):
+        """Devuelve la palabra que está representada por el indice indicado.
+        """
         return self.embeddings.wv.index2word[idx]
     
     def fit(self, X, y=None):

@@ -12,9 +12,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 class PadSequenceTransformer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     def __init__(self, max_len=None):
-        """This function transforms a list of `num_samples` sequences (lists of integers) into a 2D Numpy 
-        array of shape `(num_samples, num_timesteps)`. `num_timesteps` is either the `maxlen` argument if
-        provided, or the length of the longest sequence otherwise."""
+        """Esta función transforma una lista de `num_samples` secuencias (lista de enteros) en un Numpy 2D 
+        array de `(num_samples, num_timesteps)`. `num_timesteps` es o bien el valor del argumento `maxlen` si 
+        especificado, o la longitud mas larga en las secuencias especificadas."""
         self.max_len = max_len
 
     def fit(self, X, y=None):
