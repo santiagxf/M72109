@@ -1,6 +1,6 @@
 import time
 
-def get_response_from_async(operation):
+def get_response_from_async(computervision_client, operation):
     operation_location = operation.headers["Operation-Location"]
     operation_id = operation_location.split("/")[-1]
 
