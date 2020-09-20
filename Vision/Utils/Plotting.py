@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from skimage import io
 
-def plot_image_with_faces(img_url, boxes):
+def plot_image_with_faces(image_url, boxes):
     plt.rcParams["figure.figsize"] = (80,8)
     
     img_array = io.imread(image_url, format='jpg')
@@ -16,7 +16,7 @@ def plot_image_with_faces(img_url, boxes):
     
     plt.show()
 
-def plot_image_with_boxes(img_url, boxes):
+def plot_image_with_boxes(image_url, boxes):
     plt.rcParams["figure.figsize"] = (80,8)
     
     img_array = io.imread(image_url, format='jpg')
