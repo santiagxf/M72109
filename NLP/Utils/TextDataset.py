@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import torch
 import numpy as np
 from transformers.data.processors.utils import InputFeatures
@@ -26,7 +25,7 @@ class ClassificationDataset(torch.utils.data.Dataset):
     def get_labels(self):
         """Obtiene una lista de todas las distintas categorias que se vieron en el set de datos"""
         return list(self.label_map.keys())
-
+    
 
 class RegressionDataset(torch.utils.data.Dataset):
     def __init__(self, examples, labels, tokenizer):
@@ -44,4 +43,4 @@ class RegressionDataset(torch.utils.data.Dataset):
 
     def __len__(self):
         return self.batch_size
-
+        
