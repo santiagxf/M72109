@@ -7,7 +7,10 @@ def extract_frames(videos_dir, out_dir, rate_sec=2):
         count = 0
         basename = os.path.splitext(os.path.basename(os.path.join(videos_dir, file_)))[0]
         targetpath = os.path.join(out_dir, basename)
-        print(targetpath)
+        if os.path.isdir(targetpath):
+            continue
+        
+        print('Processing:', targetpath)
         os.mkdir(targetpath)
         
         vidcap = cv2.VideoCapture(os.path.join(videos_dir, file_))
