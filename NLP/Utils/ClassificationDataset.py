@@ -4,12 +4,12 @@ import numpy as np
 from transformers.data.processors.utils import InputFeatures
 
 class ClassificationDataset(torch.utils.data.Dataset):
-    def __init__(self, examples, labels, tokenizer):
+    def __init__(self, examples, labels, tokenizer, max_length=400):
         """Un dataset de PyTorch para resolver problemas de clasificación de texto. El dataset se construye a partir de una lista de textos indicada en `examples`,
         en donde las categorias a las que pertenece cada observación pertenece está indicada en `labels`. `tokenizer` debe ser el tokenizador con el que se 
         generen los encodings del modelo.
         ."""
-        self.batch_encoding = tokenizer.batch_encode_plus(list(examples), padding='longest', truncation=True, max_length=400, return_attention_mask=True, return_tensors = None) #return_tensors='pt' tokenizer.model_max_length
+        self.batch_encoding = tokenizer.batch_encode_plus(list(examples), padding='longest', truncation=True, max_length=max_length, return_attention_mask=True, return_tensors = None) #return_tensors='pt' tokenizer.model_max_length
         self.batch_labels = list(labels)
         self.batch_size = len(examples)
         
@@ -29,12 +29,12 @@ class ClassificationDataset(torch.utils.data.Dataset):
 
 
 class RegressionDataset(torch.utils.data.Dataset):
-    def __init__(self, examples, labels, tokenizer):
+    def __init__(self, examples, labels, tokenizer, max_length=400):
         """Un dataset de PyTorch para resolver problemas de regression de texto. El dataset se construye a partir de una lista de textos indicada en `examples`,
         en donde los valores a las que pertenece cada observación pertenece está indicado en `labels`. `tokenizer` debe ser el tokenizador con el que se 
         generen los encodings del modelo.
         ."""
-        self.batch_encoding = tokenizer.batch_encode_plus(list(examples), padding='longest', truncation=True, max_length=400, return_attention_mask = True, return_tensors = None) #return_tensors='pt'
+        self.batch_encoding = tokenizer.batch_encode_plus(list(examples), padding='longest', truncation=True, max_length=max_length, return_attention_mask = True, return_tensors = None) #return_tensors='pt'
         self.batch_labels = list(labels)
         self.batch_size = len(examples)
         
