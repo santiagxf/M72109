@@ -40,11 +40,11 @@ class AudioFeaturizer():
 
         return self.samples, self.features
 
-    def to_csv(self, file_name='./audio_features.csv'):
-        if self.samples.any():
+    def audio_features_to_csv(self, file_name='./audio_features.csv'):
+        if self.samples is None:
+            logging.error('Nothing to save. Call extract_features_from_audio first')
+        else:
             alldata = np.concatenate((self.samples.reshape((-1,1)),self.features), axis=1)
             df = pd.DataFrame(data=alldata, columns=['sequence_name', *range(1,1025)])
 
             df.to_csv(file_name)
-        else:
-            logging.error('Nothing to save. Call extract_features_from_audio first')
