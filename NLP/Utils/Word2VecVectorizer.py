@@ -11,6 +11,7 @@ import sys, os, io, pathlib
 import numpy as np
 import sklearn
 
+import gensim.downloader
 from gensim.models import KeyedVectors
 from gensim.test.utils import datapath
 
@@ -20,17 +21,21 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
     
     UNKNOWN_WORD_TOKEN = "<UNK>"
     
-    def __init__(self, model_path, sequence_to_idx=False):
+    def __init__(self, model_path, from_pretrained=True, sequence_to_idx=False):
         """Permite vectorizar una secuencia de palabras utilizando un modelo entrenado y especificado en 
-        `model_path` en formato binario. Este vectorizador puede devolver o bien los indices de las palabras
+        `model_path` en formato binario. Alternativamente, se puede especificar `from_pretrained=True` en cuyo caso model_path se refiere al nombre de
+        un modelo de `gesim`. Este vectorizador puede devolver o bien los indices de las palabras
         en el vocabulario de acuerdo al modelo indicado o bien los vectores de word2vec de acuerdo esté
         especificado en el parametro `sequence_to_idx`. Un nuevo tokens es agregado automaticamente para indicar
         tokens que no están en el vocabulario original. El vector de este token está inicializado con un valor
         aleatorio.
         """
-        path = os.path.abspath(model_path)
-        self.embeddings = KeyedVectors.load_word2vec_format(datapath(path), binary=True)
-        
+        if from_pretrained:
+            self.embeddings = gensim.downloader.load(model_path)
+        else:
+            path = os.path.abspath(model_path)
+            self.embeddings = KeyedVectors.load_word2vec_format(datapath(path), binary=True)
+
         # Agregamos una representacion para las palabras que no estan en el vocabulario
         self.embeddings.add(self.UNKNOWN_WORD_TOKEN, (np.random.rand(self.embeddings.vector_size) - 0.5) / 5.0)
         
