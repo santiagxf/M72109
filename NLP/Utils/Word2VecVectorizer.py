@@ -21,7 +21,7 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
     
     UNKNOWN_WORD_TOKEN = "<UNK>"
     
-    def __init__(self, model_path, from_pretrained=True, sequence_to_idx=False):
+    def __init__(self, model_path, from_pretrained=False, sequence_to_idx=False):
         """Permite vectorizar una secuencia de palabras utilizando un modelo entrenado y especificado en 
         `model_path` en formato binario. Alternativamente, se puede especificar `from_pretrained=True` en cuyo caso model_path se refiere al nombre de
         un modelo de `gesim`. Este vectorizador puede devolver o bien los indices de las palabras
