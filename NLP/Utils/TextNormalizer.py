@@ -4,7 +4,7 @@
 # M72109: Analisis de Datos no Estructurados
 # Universidad de Buenos Aires - Facultad de Ciencias Economicas (UBA-FCE)
 # Año: 2020
-# Profesor: Facundo Santiago
+# Profesor: Facundo Santiago, Javier Ignacio Garcia Fronti
 # -
 
 import unidecode
