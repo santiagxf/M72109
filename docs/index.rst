@@ -8,7 +8,29 @@ Gestión y análisis de datos no estructurados
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Introduccón
+
+   Sobre el curso <about>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: NLP
+
+   Introducción a NLP <nlp>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Visión
+
+   Introducción a Computer Vision <vision>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Audio y video
+
+   Audio <audio>
+   Video <video>
+
 
 
 
