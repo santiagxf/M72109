@@ -1,2 +1,0 @@
-Procesamiento de lenguage natural
-============================================
