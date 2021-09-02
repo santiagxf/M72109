@@ -17,8 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'M72102'
-copyright = '2021, Facundo Santiago'
+project = 'M72.1.02'
+copyright = '2021, Universidad de Buenos Aires (FCE-UBA)'
+html_title = 'M72.1.02'
 author = 'Facundo Santiago'
 
 
@@ -29,7 +30,10 @@ author = 'Facundo Santiago'
 # ones.
 extensions = [
     'myst_parser',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'sphinx.ext.todo',
+    'sphinx.ext.mathjax',
+    'nbsphinx'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -53,9 +57,22 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+
+myst_update_mathjax = False
+
+
+myst_update_mathjax = False
+
+nbsphinx_prolog = """
+.. image:: /_images/colab.png
+  :alt: Abrir en Google Colab
+  :target: http://colab.research.google.com/github/santiagxf/{{ env.config['project'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}
+
+"""

@@ -17,9 +17,10 @@ Gestión y análisis de datos no estructurados
    :caption: NLP
 
    Introducción a NLP <nlp/nlp>
-   Preprocesamiento <nlp/preprocessing>
-   Vectorización <nlp/vectorization>
-   Modelado <nlp/modeling>
+   Preprocesamiento <nlp/preprocessing/intro>
+   Vectorización <nlp/vectorization/intro>
+   Modelado clásico <nlp/modeling/intro>
+   Deep Learning NLP <nlp/deep/intro>
 
 .. toctree::
    :maxdepth: 2
