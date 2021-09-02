@@ -19,7 +19,7 @@ Aunque estas fronteras metodológicas son bastante útiles en la práctica, no s
   *Diferentes niveles de entendimiento del lenguaje*
 
 :Morfología: Hace referencia a las distintas formas que adoptan las palabras de una lengua con independencia de la función que ejerzan dentro de la oración. Más exactamente, de la estructura interna de la palabra.
-:Lexemas: Hace referencia a Unidad mínima de una palabra que se caracteriza por aportar significado léxico frente al morfema que aporta significado gramatical el lexema de "casa" es "cas-", y "-a" es el morfema.
+:Lexemas: Hace referencia a la unidad mínima de una palabra que se caracteriza por aportar significado léxico, frente al morfema que aporta significado gramatical. El lexema de "casa" es "cas-", y "-a" es el morfema.
 :Sintaxis: Hace referencia al análisis de las relaciones formales que se establecen en el interior de la oración, tanto desde el punto de vista de la forma como desde el punto de vista del significado entre las palabras que los conforman.
 :Semantica: Hace referencia al estudio del signficado de una expresión linguistica sin considerar sus factores pragmáticos que tienen implicancias en el significado, como ser características del contexto, convenciones del lenguaje que se usa, el objetivo del narrador, etc. 
 :Pragmática: Hace referencia al lenguaje en uso y los contextos en los que se usa, incluidos asuntos como la deixis (palabras cuyo significado depende del contexto, como *aqui*, *yo*, *vos*, *aquel*, etc), la organización del texto, la presuposición y la implicatura (la acción de implicar un significado distinto del sentido literal de lo que se dice explicitamente).
