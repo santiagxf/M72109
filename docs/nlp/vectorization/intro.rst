@@ -1,8 +1,13 @@
-Vectorización
-=============
+Vectorización de texto
+======================
+
+Un modelos de aprendizaje automático es, a groso modo, una función parametrizada f(x) que toma como entrada un vector x, n-dimensional, y produce un vector de salida m-dimensional. Tal función puede ser simple (para un modelo lineal por ejemplo) o más compleja (como una red neuronal).
+
+Cuando trabajamos con lenguaje natural, la mayoría de nuestros datos de entrada representarán características discretas y categóricas, ya sean palabras, letras o incluso utterancias (partes del discurso). La pregunta que nos haremos entonces es ¿Cómo codificamos esos datos categóricos de una manera que sea práctica para ser utilizada por un modelo de aprendizaje automático?
 
 .. toctree::
-   :maxdepth: 2
-   :caption: En esta sección
+   :maxdepth: 1
+   :caption: En esta sección veremos
 
-   Normalización <Vectorization.ipynb>
+   Vectorizado con métodos clásicos <Vectorization.ipynb>
+   Vectorizado con vectores densos <Embeddings.ipynb>

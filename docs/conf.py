@@ -33,7 +33,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
-    'nbsphinx'
+    'nbsphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -67,8 +67,10 @@ html_static_path = ['_static']
 
 myst_update_mathjax = False
 
+# -- sphinx.ext.autosectionlabel -----------------------------------------------
 
-myst_update_mathjax = False
+# autosectionlabel_prefix_document = True
+# autosectionlabel_maxdepth = 2
 
 nbsphinx_prolog = """
 .. image:: /_images/colab.png

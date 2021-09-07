@@ -14,26 +14,31 @@ Gestión y análisis de datos no estructurados
 
 .. toctree::
    :maxdepth: 2
-   :caption: NLP
+   :caption: Procesamiento de Lenguage Natural
 
-   Introducción a NLP <nlp/nlp>
-   Preprocesamiento <nlp/preprocessing/intro>
-   Vectorización <nlp/vectorization/intro>
-   Modelado clásico <nlp/modeling/intro>
-   Deep Learning NLP <nlp/deep/intro>
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Visión
-
-   Introducción a Computer Vision <vision>
+   Introducción<nlp/nlp>
+   Preprocesamiento de texto <nlp/preprocessing/intro>
+   Vectorización de texto <nlp/vectorization/intro>
+   NLP clásico <nlp/modeling/intro>
+   NLP produndo <nlp/deepnlp/intro>
 
 .. toctree::
    :maxdepth: 2
-   :caption: Audio y video
+   :caption: Visión por computadora
 
-   Audio <audio>
-   Video <video>
+   Introducción <vision/intro>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Procesamiento de audio
+
+   Introducción <audio>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Procesamiento de video
+
+   Introducción<video>
 
 
 
