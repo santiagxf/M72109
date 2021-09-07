@@ -1,8 +1,8 @@
-nltk==3.6
-pandas==1.3.0
-numpy==1.20
-matplotlib==3.4
-tqdm==4.62
+nltk
+pandas
+numpy
+matplotlib
+tqdm
 spacy==2.3.5
 unidecode
-scikit-learn==0.24.2
+scikit-learn
