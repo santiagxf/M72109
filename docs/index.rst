@@ -16,7 +16,7 @@ Gestión y análisis de datos no estructurados
    :maxdepth: 2
    :caption: Procesamiento de Lenguage Natural
 
-   Introducción<nlp/nlp>
+   Introducción<nlp/intro>
    Preprocesamiento de texto <nlp/preprocessing/intro>
    Vectorización de texto <nlp/vectorization/intro>
    NLP clásico <nlp/modeling/intro>
@@ -41,11 +41,3 @@ Gestión y análisis de datos no estructurados
    Introducción<video>
 
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

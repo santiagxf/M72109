@@ -1,3 +1,3 @@
-Deep Learning NLP
-=================
+Métodos basados en Aprendizaje Profundo
+=======================================
 

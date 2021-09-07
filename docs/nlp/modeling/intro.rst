@@ -1,5 +1,5 @@
-Modelado clásico de lenguaje natural
-====================================
+Métodos clásicos de procesamiento de texto
+==========================================
 
 En NLP, la mayoritariamente trabajaremos con problemas de clasificación, y en particular, con problemas de clasificación supervisada. Esto quiere decir que dado un conjunto de datos que representa un conjunto de `documentos` con sus respectivas `etiquetas` o `labels`, el objetivo es construir un clasificador de forma automática que identifique características dentro de cada uno de los documentos que permita identificar patrones dentro del texto relevantes para cada una de las etiquetas que tenemos disponibles.
 
