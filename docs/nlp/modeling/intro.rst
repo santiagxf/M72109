@@ -23,3 +23,4 @@ Estas técnicas se diferencian de las técnicas de :doc:`../deepnlp/intro` donde
 
    Reducción de dimensionalidad <topic-modeling.ipynb>
    Modelado clásico de lenguaje natural <classic-modeling.ipynb>
+   Modelado clásico - Actividad 1 <topic-modeling-activity.ipynb>
