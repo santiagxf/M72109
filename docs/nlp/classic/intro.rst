@@ -10,7 +10,7 @@ Un procedimiento típico entonces para alcanzar esto sería construir el siguien
 
   *Diseño de un pipeline de procesamiento de texto*
 
-En la sección anterior revisamos diferentes técnicas de preprocesamiento para la :doc:`../preprocessing/Normalization`. La mayoria de los modelos con los que trabajamos requieren que las caracteríticas estén indicadas en forma de números y es por eso que revisamos técnicas de :doc:`../vectorization/Vectorization` que nos permiten obtener representaciones más prácticas a partir de texto preprocesado.
+En la sección anterior revisamos diferentes técnicas de preprocesamiento para la :doc:`../preprocessing/Normalization`. La mayoria de los modelos con los que trabajamos requieren que las caracteríticas estén indicadas en forma de números y es por eso que revisamos técnicas de :doc:`../vectorization/vectorization` que nos permiten obtener representaciones más prácticas a partir de texto preprocesado.
 
 Sin embargo, lo que quizás caracteriza a los modelos de procesamiento de lenguaje natural clásicos la necesidad de realizar **ingenieria de predictores**. Al igual que en el modelado clásico de modelos de aprendizaje automático (Clasical Machine Learning), la ingeniería de predictores nos permite extraer características altamente informativas a partir del texto de entrada. Estas caraterísticas en general permiten a nuestros modelos poder generalizar de mejor manera y hacer sentido de la información con mayor facilidad.
 
@@ -23,4 +23,3 @@ Estas técnicas se diferencian de las técnicas de :doc:`../deepnlp/intro` donde
 
    Reducción de dimensionalidad <topic-modeling.ipynb>
    Modelado clásico de lenguaje natural <classic-modeling.ipynb>
-   Modelado clásico - Actividad 1 <topic-modeling-activity.ipynb>

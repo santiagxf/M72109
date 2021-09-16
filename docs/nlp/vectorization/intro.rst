@@ -9,5 +9,6 @@ Cuando trabajamos con lenguaje natural, la mayoría de nuestros datos de entrada
    :maxdepth: 1
    :caption: En esta sección veremos
 
-   Vectorizado con métodos clásicos <Vectorization.ipynb>
-   Vectorizado con vectores densos <Embeddings.ipynb>
+   Vectorizado con métodos clásicos <vectorization.ipynb>
+   Vectorizado con vectores densos <embeddings>
+   Consideraciones <considerations>

@@ -1,0 +1,10 @@
+tensorflow
+nltk
+pandas
+numpy
+matplotlib
+tqdm
+spacy==2.3.5
+unidecode
+scikit-learn
+gensim==3.8.3

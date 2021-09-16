@@ -16,11 +16,11 @@ Gestión y análisis de datos no estructurados
    :maxdepth: 2
    :caption: Procesamiento de Lenguage Natural
 
-   Introducción<nlp/intro>
+   Introducción <nlp/intro>
    Preprocesamiento de texto <nlp/preprocessing/intro>
    Vectorización de texto <nlp/vectorization/intro>
-   NLP clásico <nlp/modeling/intro>
-   NLP produndo <nlp/deepnlp/intro>
+   NLP clásico <nlp/classic/intro>
+   NLP neural <nlp/neural/intro>
 
 .. toctree::
    :maxdepth: 2
@@ -39,5 +39,11 @@ Gestión y análisis de datos no estructurados
    :caption: Procesamiento de video
 
    Introducción<video>
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Trabajos prácticos
+
+   Actividad 1 - Modelado clásico <nlp/classic/topic-modeling-activity.ipynb>
 
 

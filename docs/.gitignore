@@ -1,3 +1,8 @@
+# Specific folders
+**/Datasets
+**/Models
+**/Utils
+
 # sphinx build folder
 _build
 
@@ -39,3 +44,6 @@ Thumbs.db
 # Editor backup files #
 #######################
 *~
+
+*-checkpoint.ipynb
+.ipynb_checkpoints
