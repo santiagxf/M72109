@@ -13,7 +13,7 @@ Gestión y análisis de datos no estructurados
    Sobre el curso <about>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Procesamiento de Lenguaje Natural
 
    Introducción <nlp/intro>
@@ -24,19 +24,19 @@ Gestión y análisis de datos no estructurados
    Estado del arte <nlp/state-of-the-art>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Procesamiento de imágenes
 
    Introducción <vision/intro>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Procesamiento de audio
 
    Introducción <audio>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Procesamiento de video
 
    Introducción<video>
