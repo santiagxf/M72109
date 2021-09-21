@@ -10,6 +10,7 @@ Modelos como :ref:`/nlp/neural/sequences-word2vec.ipynb` son "context-free", lo 
 
 Los `Transformers`, por el contrario explotarán la capacidad de la arquitectura de :doc:`attention` al convertir las representaciones en **contextuales**, lo que significa que la representación que se genera de una palabra depende del contexto en el que aparece.
 
+
 Como funcionan
 --------------
 
@@ -23,6 +24,9 @@ En el caso de los transformers (en general - ya que depende mucho de la implemen
 
 Arquitectura
 ------------
+
+En general, la arquitectura común de los modelos basados en Transformers es la siguiente. Cada implementación tiene detalles que quizás los diferencia a los diferentes modelos que se pueden encontrar, como ser BERT, GPT-2, etc. Sin embargo, todos comparten los mismos componentes centrales.
+
 
 .. figure:: ../_images/lm_transformer.png
   :alt: Permitiendole al decoder acceder a las representaciones intermedias del encoder.
