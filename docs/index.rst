@@ -14,17 +14,18 @@ Gestión y análisis de datos no estructurados
 
 .. toctree::
    :maxdepth: 2
-   :caption: Procesamiento de Lenguage Natural
+   :caption: Procesamiento de Lenguaje Natural
 
    Introducción <nlp/intro>
    Preprocesamiento de texto <nlp/preprocessing/intro>
    Vectorización de texto <nlp/vectorization/intro>
    NLP clásico <nlp/classic/intro>
    NLP neural <nlp/neural/intro>
+   Estado del arte <nlp/state-of-the-art>
 
 .. toctree::
    :maxdepth: 2
-   :caption: Visión por computadora
+   :caption: Procesamiento de imágenes
 
    Introducción <vision/intro>
 

@@ -5,7 +5,7 @@ En NLP, la mayoritariamente trabajaremos con problemas de clasificación, y en p
 
 Un procedimiento típico entonces para alcanzar esto sería construir el siguiente flujo de trabajo:
 
-.. figure:: https://github.com/santiagxf/M72109/blob/master/NLP/Docs/atap_0406.png?raw=1
+.. figure:: ../_images/classic_pipeline.png
   :alt: Diseño de un pipeline de procesamiento de texto
 
   *Diseño de un pipeline de procesamiento de texto*
@@ -14,7 +14,7 @@ En la sección anterior revisamos diferentes técnicas de preprocesamiento para 
 
 Sin embargo, lo que quizás caracteriza a los modelos de procesamiento de lenguaje natural clásicos la necesidad de realizar **ingenieria de predictores**. Al igual que en el modelado clásico de modelos de aprendizaje automático (Clasical Machine Learning), la ingeniería de predictores nos permite extraer características altamente informativas a partir del texto de entrada. Estas caraterísticas en general permiten a nuestros modelos poder generalizar de mejor manera y hacer sentido de la información con mayor facilidad.
 
-Estas técnicas se diferencian de las técnicas de :doc:`../deepnlp/intro` donde nuestros modelos directamente son capaces de aprender representaciones que resultan utiles para la tarea que intentan representar.
+Estas técnicas se diferencian de las técnicas de :doc:`../neural/intro` donde nuestros modelos directamente son capaces de aprender representaciones que resultan utiles para la tarea que intentan representar.
 
 
 .. toctree::

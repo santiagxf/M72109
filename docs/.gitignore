@@ -46,4 +46,4 @@ Thumbs.db
 *~
 
 *-checkpoint.ipynb
-.ipynb_checkpoints
+**/.ipynb_checkpoints

@@ -73,8 +73,34 @@ myst_update_mathjax = False
 # autosectionlabel_maxdepth = 2
 
 nbsphinx_prolog = """
-.. image:: /_images/colab.png
-  :alt: Abrir en Google Colab
-  :target: http://colab.research.google.com/github/santiagxf/{{ env.config['project'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}
+.. raw:: html
 
+  <table>
+  <tr>
+    <td>
+    <a style="border-radius: 8px;
+      box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+      font-size: 14px;
+      color: #202124;
+      padding: 8px 14px;
+      transition: box-shadow 0.2s;
+      display: flex;
+      align-items: center"
+        target="_blank" href="http://colab.research.google.com/github/santiagxf/{{ env.config['project'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}">
+      <img src="https://www.tensorflow.org/images/colab_logo_32px.png" style="margin-right: 8px">Abrir en Google Colab</a>
+    </td>
+        <td>
+    <a style="border-radius: 8px;
+      box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+      font-size: 14px;
+      color: #202124;
+      padding: 8px 14px;
+      transition: box-shadow 0.2s;
+      display: flex;
+      align-items: center"
+        href="https://raw.githubusercontent.com/santiagxf/{{ env.config['project'].replace('.','') }}/master/docs/{{ env.doc2path(env.docname, base=None) }}">
+      <img src="https://www.tensorflow.org/images/download_logo_32px.png" style="margin-right: 8px">Descargar notebook</a>
+    </td>
+  </tr>
+  </table>
 """
