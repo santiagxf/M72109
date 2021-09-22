@@ -63,8 +63,9 @@ El ejemplo anterior construye una red para resolver un problema de clasificació
 .. toctree::
    :maxdepth: 1
    :caption: Ejemplos
-
-   Modelos basados en secuencias con Word2Vec <sequences-word2vec.ipynb>
+   
+   Ejemplo: Modelo de encoder <sequences-encoder.ipynb> 
+   Ejemplo: Modelo de encoder con embeddings Word2Vec <sequences-word2vec.ipynb>
 
 .. _rst-transducer:
 
@@ -116,6 +117,12 @@ La arquitectura de :ref:`rst-transducer` resulta útil para la implementación d
 Al momento de realizar el muestreo de la palabra en cada posición del transducer podemos o bien muestrear la palabra basandonos en la distribución de salida o realizara una búqueda para encontrar una salida global de la oración que sea altamente probable.
 
 Los generators son altamente potentes para generar secuencias de texto coherentes. En general, estos modelos se entrenan al nivel de caracteres lo cual los fuerza a buscar relaciones en la secuencia en posiciones mucho mas alejadas que cuando se entrenan sobre palabras. La tarea de entrenar un modelo cuyo objetivo es predecir la probabilidad del siguiente simbolo (caracter o palabra) de una secuencia se llama :ref:`rst-language-model`.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Ejemplos
+
+   Generators utilizando Keras <sequences-generator.ipynb>
 
 .. _rst-conditioned-generator:
 
