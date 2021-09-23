@@ -7,10 +7,11 @@ Gestión y análisis de datos no estructurados
 ============================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Introduccón
 
-   Sobre el curso <about>
+   Sobre el curso <intro/about>
+   Programación para Deep Learning <intro/programming>
 
 .. toctree::
    :maxdepth: 1
@@ -42,7 +43,7 @@ Gestión y análisis de datos no estructurados
    Introducción<video>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Trabajos prácticos
 
    Actividad 1 - Modelado clásico <nlp/classic/topic-modeling-activity.ipynb>

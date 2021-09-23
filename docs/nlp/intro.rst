@@ -1,4 +1,4 @@
-Procesamiento de Lenguae Natural
+Procesamiento de Lenguaje Natural
 =================================
 
     La lengua, producto de la actividad humana, comparte con tal actividad su carácter teleológico o de finalidad. Cuando se analiza el lenguaje como expresión o como comunicación, la intención del sujeto hablante es la explicación que se presenta con mayor facilidad y naturalidad. Por esto mismo, en el análisis lingüístico, debe uno situarse en el punto de vista de la función. Desde este punto de vista, la lengua es un sistema de medios de expresión apropiados para un fin.
