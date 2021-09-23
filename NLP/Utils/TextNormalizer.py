@@ -16,7 +16,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize.casual import TweetTokenizer
 
 class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
-    def __init__(self, language='spanish', lemmatize=True, stem=False, reduce_len=True, strip_handles=True, strip_urls=True, token_min_len=4, preserve_case=True, text_to_sequence=False):
+    def __init__(self, language='spanish', lemmatize=True, stem=False, reduce_len=True, strip_handles=True, strip_stopwords=True, strip_urls=True, token_min_len=4, preserve_case=True, text_to_sequence=False):
         """Un normalizador de texto pensado para procesamiento de Tweets en español. Este normalizador puede devolver o bien un texto transformado o bien una secuencia de tokens si se
         indica el parametro `text_to_sequence`. Dentro de los procesamientos disponibles son lemmatization, stemming, reducir la longitud de caracteres repetidos, eliminar handles, 
         eliminar URLs, eliminar mayusculas."""
@@ -35,10 +35,14 @@ class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMi
             self.stemmer = nltk.stem.SnowballStemmer(language=language) # Creamos un steammer
         else:
             self.stemmer = False
+        
         if lemmatize:
             self.lemmatizer = lambda word : " ".join([token.lemma_ for token in self.parser(word)]) # Creamos un lemmatizer
         else:
             self.lemmatizer = False
+        
+        self.strip_stopwords = strip_stopwords
+        self.strip_urls = strip_urls
         self.stopwords = set(stopwords.words(language)) # Instanciamos las stopwords en español
         self.urls_regex = re.compile('http\S+') # Usamos una expresion regular para encontrar las URLs
         self.token_min_len = token_min_len
@@ -48,10 +52,15 @@ class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMi
         """Procesa una secuencia de texto de acuerdo a la configuración del normalizador. Este método
         devuelve una secuencia de tokens."""
         tokens = self.tokenizer.tokenize(text)
-        tokens = [token for token in tokens if not re.match(self.urls_regex, token)]
+
+        if (self.strip_stopwords):
+            tokens = [token for token in tokens if not re.match(self.urls_regex, token)]
+        
         tokens = [token for token in tokens if len(token) > self.token_min_len]
-        tokens = [token for token in tokens if token not in self.stopwords]
         tokens = [unidecode.unidecode(token) for token in tokens] # Quitamos acentos
+
+        if (self.remove_stopwords):
+            tokens = [token for token in tokens if token not in self.stopwords]
         if self.lemmatizer:
             tokens = [self.lemmatizer(token) for token in tokens]
         if self.stemmer:
