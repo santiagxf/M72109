@@ -122,7 +122,7 @@ Los generators son altamente potentes para generar secuencias de texto coherente
    :maxdepth: 1
    :caption: Ejemplos
 
-   Generators utilizando Keras <sequences-generator.ipynb>
+   Ejemplo: Generators utilizando Keras <sequences-generator.ipynb>
 
 .. _rst-conditioned-generator:
 

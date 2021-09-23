@@ -53,13 +53,13 @@ class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMi
         devuelve una secuencia de tokens."""
         tokens = self.tokenizer.tokenize(text)
 
-        if (self.strip_stopwords):
+        if (self.strip_urls):
             tokens = [token for token in tokens if not re.match(self.urls_regex, token)]
         
         tokens = [token for token in tokens if len(token) > self.token_min_len]
         tokens = [unidecode.unidecode(token) for token in tokens] # Quitamos acentos
 
-        if (self.remove_stopwords):
+        if (self.strip_stopwords):
             tokens = [token for token in tokens if token not in self.stopwords]
         if self.lemmatizer:
             tokens = [self.lemmatizer(token) for token in tokens]
