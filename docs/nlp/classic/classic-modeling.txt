@@ -1,6 +1,6 @@
 nltk
-pandas
-numpy
+pandas==1.1.5
+numpy==1.19.5
 matplotlib
 tqdm
 spacy==2.3.5

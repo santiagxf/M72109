@@ -56,7 +56,7 @@ Existen diversos algoritmos que utilizan este enfoque, cada uno con detalles de 
 
 - **Word2Vec:** Es en realidad una familia de algoritmos que se introdujo por primera vez en [Mikolov et al., 2013] y popularizado por Google, el cual está diseñado para tener las mismas propiedades que un :ref:`rst-language-model`, pero utilizando una metodología mas eficiente. Veremos en más detalle :ref:`/nlp/vectorization/Word2Vec.ipynb`. 
 - **GloVe:** Es un algoritmo introducido por [Pennington et al., 2014] y popularizado por Stanford Univeristy, que persigue un objetivo similar a Word2Vec pero que está basado en factorización de matrices [Levy and Goldberg, 2014].
-- **fasttext: ** Se trata de un modelo introducido por Facebook en el 2016 como una versión mejorada y extendida de la idea original de *Word2Vec*. La librería `gensim.models.fasttext` dispone de esta implementación.
+- **fasttext:** Se trata de un modelo introducido por Facebook en el 2016 como una versión mejorada y extendida de la idea original de *Word2Vec*. La librería `gensim.models.fasttext` dispone de esta implementación.
 
 
 Embeddings pre-entrenados
@@ -66,8 +66,14 @@ Muy frecuentemente no dispondremos de cuerpos de texto lo suficientemente grande
 
 Si utilizamos embeddings pre-entrenados, hay algunas consideraciones que se deben tomar. La primera elección tiene que ver con el :doc:`../preprocessing/intro`. ¿Que tipo de preprocesamiento es necesario en el texto para tener un vocabulario similar al que utilizó el algoritmo del modelo pre-entrenado? 
 
-La siguiente elección es de que manera se van a utilizar estos embeddings: utilizando *fine-tuning* o utilizandolos como *feature-extrators*. Una estrategia común es tratar los pesos de los embeddings como cualquier otro parametro de la red y por lo tanto actualizarlos de acuerdo a la tarea en cuestión. Si bien esto funciona bien, tiene el efecto lateral/potencial de cambiar las representaciones de las palabras en direcciones no compatibles con las que fué entrenado originalmente. Esto podría dañar la capacidad de generalización del modelo.
+La siguiente elección tiene que ver con la manera en que se van a utilizar estos embeddings: utilizando **fine-tuning** o utilizandolos como **feature-extrators**.
 
+Fine-tuning
+^^^^^^^^^^^
+Una estrategia común es tratar los pesos de los embeddings como cualquier otro parametro de la red y por lo tanto actualizarlos de acuerdo a la tarea en cuestión. Si bien esto funciona bien, tiene el efecto lateral/potencial de cambiar las representaciones de las palabras en direcciones no compatibles con las que fué entrenado originalmente. Esto podría dañar la capacidad de generalización del modelo.
+
+Feature-extrators
+^^^^^^^^^^^^^^^^^
 Otra alternativa es mantener los pesos de los embeddings congelados y utilizar entonces al modelo como un *feature-extrator*. Esto tiene el beneficio de que las representaciones mantienen sus relaciones originales, pero puede hacer que el modelo tenga problemas para utilziar las representaciones en la tarea específica dada. Por ejemplo, si los palabras "caliente" y "frio" reciben vectores similares, entonces el modelo podría tener problemas para separar estos dos conceptos. En :ref:`/nlp/neural/sequences-word2vec.ipynb` veremos un ejemplo de como lograr esto.
 
 
