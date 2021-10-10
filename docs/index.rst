@@ -13,6 +13,7 @@ Gestión y análisis de datos no estructurados
    Sobre el curso <intro/about>
    Programación para Deep Learning <intro/programming>
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Procesamiento de Lenguaje Natural
@@ -24,11 +25,17 @@ Gestión y análisis de datos no estructurados
    NLP neural <nlp/neural/intro>
    Estado del arte <nlp/state-of-the-art>
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Procesamiento de imágenes
 
    Introducción <vision/intro>
+   Aprendizaje por representaciones <neural/representations>
+   Modelos para imágenes <vision/tasks/intro>
+   Modelos para video <vision/video/intro>
+   Estado del arte <vision/state-of-the-art>
+
 
 .. toctree::
    :maxdepth: 1
@@ -36,11 +43,6 @@ Gestión y análisis de datos no estructurados
 
    Introducción <audio>
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Procesamiento de video
-
-   Introducción<video>
 
 .. toctree::
    :maxdepth: 1
