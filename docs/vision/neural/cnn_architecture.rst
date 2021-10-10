@@ -26,7 +26,7 @@ Podemos pensar de este paso cómo la capacidad del modelo de tomar las imágenes
 
   *Extracción de predictores*
 
-En general apilaremos una :ref:`rst_cnn_conv_layer` seguida de una :ref:`rst_cnn_pool_layer` para generar nuestro mapa de predictores o *feature map*. Luego de la capa de convolución, la imágen mantiene (usalmente) sus mismas dimensiones pero su profundidad aumenta. Recuerde que las capas de convolución no aprenden un filtro sino que aprenden muchos, cada uno con una tarea específica. Para reducir este aumento en la dimensionalidad, aplicamos una :ref:`rst_cnn_pool_layer` la cual genera el efecto opuesta que la anterior: mantiene la misma profundidad pero disminuye la superficie de la imágen. 
+En general apilaremos una :ref:`capa convolucional <rst_cnn_conv_layer>` seguida de una :ref:`capa de pooling <rst_cnn_pool_layer>` para generar nuestro mapa de predictores o *feature map*. Luego de la capa de convolución, la imágen mantiene (usalmente) sus mismas dimensiones pero su profundidad aumenta. Recuerde que las capas de convolución no aprenden un filtro sino que aprenden muchos, cada uno con una tarea específica. Para reducir este aumento en la dimensionalidad, aplicamos una :ref:`capa de pooling <rst_cnn_pool_layer>` la cual genera el efecto opuesta que la anterior: mantiene la misma profundidad pero disminuye la superficie de la imágen. 
 
 Cuando aplicamos esta estructura de forma repetitiva, el resultado es un proceso que va desde *feature maps* conceptuales a *features* densas:
 

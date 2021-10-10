@@ -23,15 +23,15 @@ Las redes basadas en CNN o **Red Neuronal Convolucional** ofrecen soluciones sim
   *(Izquierda) Red neuronal completamente conectada donde todas las neuronas están conectadas a todos los píxeles de la imagen. (Derecha) Red conectada localmente donde solo un subconjunto de píxeles está conectado a cada neurona.*
 
 
-Arquitectura
-------------
+Componentes principales
+-----------------------
 
-La arquitectura de este tipo de modelos está basada en 3 tipos de capas: de convolución, pooling y capas completamente conectadas.
+La arquitectura de este tipo de modelos está basada en 3 tipos de capas principalmente: `Convolucional`_, `Pooling`_ y `Completamente conectada`_.
 
 .. _rst_cnn_conv_layer:
 
-Capa convolucional
-^^^^^^^^^^^^^^^^^^
+Convolucional
+^^^^^^^^^^^^^
 Las redes basadas en CNN obtienen su nombre debido a esta capa, ya que son el corazón de su arquitectura. En estas capas, el número de parámetros se reduce al compartir los mismos pesos y sesgos entre todas las neuronas conectadas al mismo canal de salida. Una forma practica de pensarlo es que en lugar de conectar cada neurona a todos los pixeles de la imagen, cada una de ellas está conectada solamente a un conjunto limitado de pixeles que la rodean en cada *paso*. Esta neurona se va desplazando por toda la imagen, paso a paso, hasta lograr cubrir toda la imagen de entrada.
 
 El conjunto limitado de pixeles a los que está conectada cada neurona se lo llama **filtro o kernel**, y en general tienen dimensiones *(k, k)*, es decir son cuadrados, pero esto no mandatorio. Estos filtros toman una entrada de dimensiones :math:`(k, k, D)` y combinan linealmente los valores para luego aplicar una función de activación no lineal. Repitiendo esta operación para cada posición que el filtro puede tomar sobre la imagen hasta cubrirla por completo, el resultado es una matriz de activación, llamada *activation map*, de dimensiones :math:`(H_f, W_f, D)`, siendo :math:`H_f` y :math:`W_f` la cantidad de veces que el filtro *f* pudo desplazarce sobre la imagen de entrada. *D* representa la cantidad de canales que posee la entrada.
@@ -99,8 +99,8 @@ Los parametros `padding` o `strike` no fueron indicados, lo que significa que ut
 
 .. _rst_cnn_pool_layer:
 
-Capa pooling
-^^^^^^^^^^^^
+Pooling
+^^^^^^^
 
 Las capas de tipo `pooling` son un tanto particulares ya que no tienen parámetros para aprender. En estas capas, cada neurona está conectada a un subconjunto de valores circundantes (similar a la capa de convolución), pero solo retorna un valor al computar una función estadística predefinida sobre el mismo. El objetivo principal de esta capa es reducir la dimensionalidad espacial de los datos al forzar a la red a comprimir su información. Se puede pensar a esta capa como un "muestreo". Esto ademas trae como ventaja reducir la cantidad de parámetros de la red y también el tiempo de entrenamiento.
 
@@ -122,6 +122,12 @@ Los parámetros de este tipo de capa son:
   :alt: Pooling
 
   *Pooling*
+
+
+Ejemplo
+*******
+
+En `TensorFlow`, podemos crear una capa pooling de la siguiente forma:
 
 .. code::
 
@@ -149,8 +155,8 @@ Los parametros `padding` o `strike` no fueron indicados, lo que significa que ut
 
 .. warning:: El principal objetivo de la capa de pooling es la de reducir el número de parámetros en la red. Cuantos más parámetros tenemos, más complejo computacionalmente se vuelve. Existen muchas corrientes que están en contra de utilizar estas operaciones de pooling sosteniendo de que se puede lograr lo mismo utilizando `padding` en las capas de CNN con valores más grandes. Para exlorar estas alternativas recomendamos la lectura de `Jost Tobias Springenberg, Alexey Dosovitskiy, Thomas Brox, and Martin Riedmiller, "Striving for Simplicity: The All Convolutional Net" <https://arxiv.org/abs/1412.6806>`_ .
 
-Capa completamente conectada
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Completamente conectada
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Las capas completamente conectadas son exactamente las mismas que utilizamos en redes neuronales convencionales. A pesar de que vimos que estas capas representan problemas al utilizarla con tipos de datos de imagen, las mismas son utiles en las últimas capas de una arquitectura basada en CNN. En general se las utiliza para convertir características o predictores multidimencionales en vectores unidimensionales o para conectar un clasificador.
 
