@@ -57,6 +57,13 @@ Dependiendo del problema que estamos intentando resolver, será el tipo de prepr
 
 Las tareas de estandarización tiene como objetivo suministrar el modelo de aprendizaje de datos un conjunto más homogeneo o que quizas resalta en mayor medidas los elementos en los que estamos interesados en aprender. Las tareas de aumento del conjunto de datos, por el contrario, tiene como objetivo generar un conjunto de datos más rico y con mayor variabilidad para que nuestro modelo deje de descansar en condiciones especificas de las imágenes que suministramos simplemente porque no tenemos un conjunto de datos lo suficientemente grande.
 
+Ejemplos
+^^^^^^^^
+
+Para ver un ejemplo de transformaciones para el aumento del conjunto de datos de entrenamiento puede revisar el ejemplo :ref:`/vision/tasks/classification/code/cnn_class_augmentation.ipynb`. Sin embargo, el mismo introduce algunos conceptos que se verán más adelante. Refierase solo a la sección de aumento del conjunto de datos utilizando la librería `TensorFlow`.
+
+Existen otros servicios en la nube, como `RoboFlow` el cual permite realizar tareas de data augmentation de forma automática.
+
 
 Extracción de predictores
 -------------------------

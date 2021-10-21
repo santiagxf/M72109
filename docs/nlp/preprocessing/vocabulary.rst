@@ -6,7 +6,7 @@ El vocabulario
 --------
 En el contexto de NLP, el corpus de texto se refiere al conjunto de textos utilizados para una tarea particular. Por ejemplo, si estuviéramos construyendo un modelo para analizar artículos de noticias, nuestro corpus de texto sería el conjunto completo de artículos o trabajos que usamos para entrenar y evaluar el modelo. El conjunto de palabras únicas que se utilizan en el corpus se denomina vocabulario.
 
-El concepto de **vocabulario** es importante ya que los modelos de aprendizaje automático no pueden lidear con texto directamente, sino que necesitan representar las palabras como vectores. Para representar una palabra como un vector es necesario conocer el espacio en el cual la vamos a representar. Dicho espacio está definido por todas las palabras que son posible encontrar dentro del corpus, es decir el **vocabulario**. Ya sea que estamos trabajando con modelos clásicos o modelos de aprendizaje profundo, el concepto del **vocabulario** es clave ya que sus dimensiones afectan las representaciones de las palabras.
+El concepto de **vocabulario** es importante ya que los modelos de aprendizaje automático no pueden trabajar con texto directamente, sino que necesitan representar las palabras como vectores. Para representar una palabra como un vector es necesario conocer el espacio en el cual la vamos a representar. Dicho espacio está definido por todas las palabras que son posible encontrar dentro del corpus, es decir el **vocabulario**. Ya sea que estamos trabajando con modelos clásicos o modelos de aprendizaje profundo, el concepto del **vocabulario** es clave ya que sus dimensiones afectan las representaciones de las palabras.
 
 Vocabularios a nivel de caracteres
 ----------------------------------
