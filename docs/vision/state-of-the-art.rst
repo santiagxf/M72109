@@ -10,6 +10,7 @@ ViT es una arquitectura que aumenta significativamente el número de parámetros
 
 .. figure:: _images/state_vit_params.png
   :alt: Numero de parametros y conjunto de entrenamiento entre arquitecturas CNN y Transfomers.
+  :width: 500
 
   *Numero de parametros y conjunto de entrenamiento entre arquitecturas CNN y Transfomers.*
 
@@ -47,7 +48,7 @@ En general estos modelos se los entrena no solo en una tarea auxiliar, sino que 
 Utilizando esta técnica, `Facebook AI introdujo SEET en 2021 <https://ai.facebook.com/blog/seer-the-start-of-a-more-powerful-flexible-and-accessible-era-for-computer-vision/>`_ [3]_, un modelo de clasificación de imágenes con aprendizaje no supervisado que se entreno sobre 1B de imágenes de Instagram. Estos modelos aprenden “class-specific features leading to unsupervised object segmentations”.
 Suguiriendo que este tipo de predictores no aparecen en su modalidad supervisada.
 
-.. figure:: _images/state_self_supervised_repr.png
+.. figure:: _images/state_self_supervised_rep.png
   :alt: Ejemplos de las representaciones generadas por un modelo entrenado con self-supervised learning.
 
   *Ejemplos de las representaciones generadas por un modelo entrenado con self-supervised learning* [3]_
