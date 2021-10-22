@@ -68,6 +68,8 @@ CLIP es capaz de generalizar más alla de las imagenes que posee en su conjunto 
 La técnica de entrenamiento de CLIP esta basada en **Constrastive Learning**. Para más información sobre esta técnica y como se implementa puede ver `Contrastive Learning: Effective Anomaly Detection with Auto-Encoders <https://santiagof.medium.com/contrastive-learning-effective-anomaly-detection-with-auto-encoders-98c6e1a78ada>`_
 
 
+**Referencias:**
+
 .. [1] Fuente: https://arxiv.org/pdf/2010.11929.pdf
 .. [2] Fuente: https://arxiv.org/pdf/2106.04560v1.pdf 
 .. [3] Fuente: https://ai.facebook.com/blog/seer-the-start-of-a-more-powerful-flexible-and-accessible-era-for-computer-vision/  
