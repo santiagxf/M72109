@@ -1,3 +1,0 @@
-Modelos de visión preentrenados
--------------------------------
-

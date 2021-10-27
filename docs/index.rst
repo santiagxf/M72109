@@ -32,7 +32,7 @@ Gestión y análisis de datos no estructurados
 
    Introducción <vision/intro>
    Arquitecturas neurales <vision/neural/intro>
-   Modelos para imágenes <vision/tasks/intro>
+   Modelos para imágenes <vision/tasks/images>
    Modelos para video <vision/tasks/video>
    Estado del arte <vision/state-of-the-art>
 
@@ -41,7 +41,7 @@ Gestión y análisis de datos no estructurados
    :maxdepth: 1
    :caption: Procesamiento de audio
 
-   Introducción <audio>
+   Introducción <audio/intro>
 
 
 .. toctree::

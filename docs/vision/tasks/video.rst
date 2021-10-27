@@ -1,6 +1,7 @@
 Procesamiento de video
 ======================
 
+
 Principales tareas en el procesamiento de video
 -----------------------------------------------
 
@@ -17,3 +18,15 @@ Reconocimiento de acciones
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 De igual forma que :ref:`rst_object_tracking` nos permite realizar el seguimiento de un objeto como una generalización de :ref:`rst_object_detection`, el reconocimiento de acciones nos permite estimar la acción que un determinado objeto o persona está realizando como una generalización de :ref:`rst_pose_estimation`. Por ejemplo, para las personas estas acciones podrían ser **bailando, levantandose, sentandose, dibujando, etc**. 
+
+Slow-motion
+^^^^^^^^^^^
+
+Estos modelos tienen como objetivo realizar la interpolación entre dos cuadros, con el objetivo de generar videos que hagan que las "camara lenta" de un video se vean de una forma mas fluida.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: En esta sección veremos
+
+   Videos como secuencias <sequences/intro>
+   Redes de convolución 3D <sequences/conv3d>
