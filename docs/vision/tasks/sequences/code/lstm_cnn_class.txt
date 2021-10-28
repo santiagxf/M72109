@@ -1,5 +1,5 @@
 tensorflow
-tensorflow-datasets
+tensorflow-hub
 matplotlib
 pandas
 numpy
