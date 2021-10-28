@@ -33,3 +33,10 @@ Detección de escena
 Una técnica más avanzada para realizar esto es utilizar **scene extraction** o **extracción de escenas**. Se trata de una técnica muy popular, sobre todo cuando queremos analizár videos de larga duración, donde un algoritmo detecta cuando el video ha cambiado de una escena a la otra. Por ejemplo, cuando la camara enfoca a otro lugar, o cuando se acerca a una escena en particular, etc. Por cada una de estas escenas, podríamos tomar una muestra de un cuadro para utilizar como entrada en nuestra secuencia.
 
 Estos algoritmos hoy en día resultan sumamente eficientes y pueden computar estos cambios de escenas de forma rápida utilizando las variaciones de colores en los pixeles de cada uno de los cuadros.
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Ejemplos
+    :glob:
+
+    code/lstm_cnn_class.ipynb
