@@ -34,3 +34,19 @@ Dropout como forma de regularización
 ------------------------------------
 
 Ademas de proveer una forma de que nuestros modelos aprendan a lidear con palabras fuera del vocabulario, *dropout* es útil a la hora de prevenir **overfitting** y así mejorar su rubustés dado que límita que tanto nuestro modelo puede descansar en alguna palabra en particular.
+
+
+Longitudes de las secuencias
+----------------------------
+
+Las secuencias de texto con las que trabajamos podrían ser de una cantidad de palabras infinita, sin embargo, en computación sabemos que no existe poder de computo infinito y por lo tanto es necesario imponer restricciones en las dimensiones de nuestros datos de entrada. Dependiendo de los requisitos computacionales del modelo con el que estamos trabajando y sus supociones, será entonces la longitud máxima de texto sobre la que podemos trabajar. Modelos complejos pondrán mayor presión de recursos de hardware y por lo tanto podrían ser más restrictivos con la cantidad de palabras que podemos procesar.
+
+.. note::
+    Adicionalmente, no pierda de vista que todos los modelos trabajan sobre representaciones de palabras. Es decir que, dependiendo de como se representen las palabras será la cantidad de "tokens" que emitirá. Por ejemplo, :ref:`/nlp/vectorization/Word2Vec.ipynb` utiliza un vector para representar cada palabra, mientras modelos basados en :doc:`../neural/transformers` utilizan representaciones que producen multiples `tokens` por cada palabra. Es decir, que su longitud esta restringida por la cantidad de tokens, no por la cantidad de palabras, siendo `cantidad-de-tokens >= cantidad-de-palabras`.
+
+Entonces: ¿qué hacemos cuando la longitud de tokens de los documentos de entrada de mi modelo son más grandes que la longitud máxima de mi modelo? Existen varias formas de resolver este problema. La publicación `How to Fine-Tune BERT for Text Classification? <https://arxiv.org/abs/1905.05583>`_ comenta varias alternativas en un contexto de :doc:`../neural/transformers`, entre ellas:
+
+ - Truncar las secuencias a la máxima longitud disponible, con la esperanza de que toda la información relevante esté en la secuencia resultante. Claramente aquí perderá información y dependerá de la cantidad de información que piede si es una alternativa viable o no.
+ - Utilizar un modelo que opere sobre secuencias más largas, como podría ser `Reformer <https://huggingface.co/transformers/model_doc/reformer.html>`_ o `Longformer <https://huggingface.co/transformers/model_doc/longformer.html>`_ .
+ - Ejecutar el modelo sobre subsecuencias más pequeñas y luego entrenar un metamodelo que tome las predicciones de cada secuencia y las combine (LSTM).
+ - Dividir la secuencia en subsecuencias de un tamaño menos pero manteniendo algo del contexto de la subsecuencia anterior a la que estamos procesando. Luego ejecutar nuestro modelo tratando a cada subsecuencia como un documento distinto. Las predicciones de todas las subsecuencias luego son agregadas utilizando alguna función. Para ver un ejemplo de esto ultimo vea :ref:`/nlp/preprocessing/long_sequences.ipynb`.

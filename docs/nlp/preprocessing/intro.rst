@@ -16,3 +16,4 @@ Como con todo problema que se resuelve utilizando aprendizaje automático, la ca
 
    El vocabulario <vocabulary>
    Normalización de texto <Normalization.ipynb>
+   Trabajando con secuencias largas <long_sequences.ipynb>

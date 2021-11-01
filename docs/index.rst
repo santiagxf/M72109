@@ -42,6 +42,7 @@ Gestión y análisis de datos no estructurados
    :caption: Procesamiento de audio
 
    Introducción <audio/intro>
+   Modelos neurales <audio/neural/intro>
 
 
 .. toctree::
