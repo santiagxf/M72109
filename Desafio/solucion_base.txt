@@ -1,0 +1,13 @@
+librosa
+moviepy
+soundfile
+azure-cognitiveservices-speech
+transformers
+unidecode
+tensorflow-datasets
+tensorflow-hub
+azure-cognitiveservices-vision-computervision
+matplotlib
+skimage
+pandas
+numpy
