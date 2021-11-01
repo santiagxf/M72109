@@ -17,7 +17,7 @@ Para entender mejor cómo se descompone un sonido en diferentes armónicos, resu
 
 
 
-.. figure:: _images/spectogram_decomposition.gif
+.. figure:: ../_images/spectogram_decomposition.gif
   :alt: Esta gráfica representa el sonido con forma de onda cuadrada. El sonido se produce a partir de una nota con frecuencia fundamental f a la cual se añaden armónicos de frecuencias 3·f, 5·f, 7·f, y respectivamente amplitudes 1/3, 1/5 y 1/7.
 
   *Esta gráfica representa el sonido con forma de onda cuadrada. El sonido se produce a partir de una nota con frecuencia fundamental f a la cual se añaden armónicos de frecuencias 3·f, 5·f, 7·f, y respectivamente amplitudes 1/3, 1/5 y 1/7.* `Fuente. <https://www.lpi.tel.uva.es/~nacho/docencia/ing_ond_1/trabajos_05_06/io2/public_html/sonido.html>`_
@@ -30,7 +30,7 @@ Hasta el momento, siemple hemos visto las ondas de sonido representadas en el do
 
 Los espectogramas son justamente una forma de integral tal tipo de representación a lo largo del tiempo al producir el espectro del sonido en cada momento. Podríamos decir que esto es análogo a tomarle una fotografía al audio.
 
-.. figure:: _images/spectogram_sample.png
+.. figure:: ../_images/spectogram_sample.png
     :alt: Sonido representado como amplitudes a lo largo del tiempo y su correspondiente espectograma
     :width: 500
 
