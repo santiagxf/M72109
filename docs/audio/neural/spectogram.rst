@@ -67,5 +67,5 @@ Para más información sobre este set de datos pueden visitar: https://research.
    :maxdepth: 1
    :caption: Ejemplos
 
-   YAMNet <yamnet.ipynb>
+   YAMNet <yamnet_class.ipynb>
    
