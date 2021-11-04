@@ -1,5 +1,5 @@
-Técnicas basadas en espectogramas
-=================================
+Técnicas basadas en espectrogramas
+==================================
 
 Introducción
 ------------
@@ -23,31 +23,31 @@ Para entender mejor cómo se descompone un sonido en diferentes armónicos, resu
   *Esta gráfica representa el sonido con forma de onda cuadrada. El sonido se produce a partir de una nota con frecuencia fundamental f a la cual se añaden armónicos de frecuencias 3·f, 5·f, 7·f, y respectivamente amplitudes 1/3, 1/5 y 1/7.* `Fuente. <https://www.lpi.tel.uva.es/~nacho/docencia/ing_ond_1/trabajos_05_06/io2/public_html/sonido.html>`_
 
 
-El espectograma
+El espectrograma
 ---------------
 
 Hasta el momento, siemple hemos visto las ondas de sonido representadas en el domino del tiempo, es decir, con el eje X representando el tiempo. Una forma alternativa de representar la misma información es graficar la amplitud de la onda vs las diferentes frecuencias en las que el sonido está descompuesto. Esto describiría el sonido en un momento particular del tiempo.
 
-Los espectogramas son justamente una forma de integral tal tipo de representación a lo largo del tiempo al producir el espectro del sonido en cada momento. Podríamos decir que esto es análogo a tomarle una fotografía al audio.
+Los espectrogramas son justamente una forma de integral tal tipo de representación a lo largo del tiempo al producir el espectro del sonido en cada momento. Podríamos decir que esto es análogo a tomarle una fotografía al audio.
 
 .. figure:: ../_images/spectogram_sample.png
-    :alt: Sonido representado como amplitudes a lo largo del tiempo y su correspondiente espectograma
+    :alt: Sonido representado como amplitudes a lo largo del tiempo y su correspondiente espectrograma
     :width: 500
 
-    *Sonido representado como amplitudes a lo largo del tiempo y su correspondiente espectograma*
+    *Sonido representado como amplitudes a lo largo del tiempo y su correspondiente espectrograma*
 
 Esta representación que acabamos de generar quizás le de una idea de en que dirección nos moveremos, ya que hemos transformado un audio en una imagen. La pregunta sería ¿podremos utilizar las técnicas de procesamiento de imágenes que vimos anteriormente en este tipo de imágenes?.
 
 
-Espectogramas como imágenes
----------------------------
+Espectrogramas como imágenes
+----------------------------
 
-Dado que podemos interpretar a los espectogramas como imágenes, resulta atractivo utilizar las mismas técnicas de procesamiento de imágenes para procesar este tipo de dato. 
+Dado que podemos interpretar a los espectrogramas como imágenes, resulta atractivo utilizar las mismas técnicas de procesamiento de imágenes para procesar este tipo de dato. 
 
 En general, un modelo de aprendizaje automático que utilice esta técnica hará los siguietnes pasos:
 - Disponibilizar los archivos de audio en formato wav. ¿Por qué?. Los formatos como `mp3` o `ogg` son formatos comprimidos que se volvieron populares ya que permiten reducir el tamaño necesario para almacenar información de audio a costa de perder una pequeña calidad en el sonido. Nuestros modelos no pueden trabajar con archivos comprimidos, y por lo tanto los necesitamos en su formato puro, generalmente `wav`.
-- Convertir los archivos de audio en espectogramas.
-- Normalizar los archivos de espectogramas para asegurarnos de que todo nuestro conjunto de datos es compatible. Opcionalmente, podemos aplicar técnicas de *data augmentation* para incrementar la variabilidad de datos que tenemos para entrenarnos.
+- Convertir los archivos de audio en espectrogramas.
+- Normalizar los archivos de espectrogramas para asegurarnos de que todo nuestro conjunto de datos es compatible. Opcionalmente, podemos aplicar técnicas de *data augmentation* para incrementar la variabilidad de datos que tenemos para entrenarnos.
 - Emplear una arquitecturas CNN estándar para procesarlos y extraer predictores.
 - Conectar un estimador (como por ejemplo, un clasificador) para resolver el problema que estamos modelando.
 
