@@ -9,7 +9,6 @@ azure-cognitiveservices-speech
 unidecode
 azure-cognitiveservices-vision-computervision
 matplotlib
-skimage
 pandas
 numpy
 scipy
