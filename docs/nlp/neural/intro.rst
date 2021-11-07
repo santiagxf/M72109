@@ -21,3 +21,4 @@ El concepto de representaciones es central para la idea de deep learning. Más a
    Modelos de secuencias-a-secuencias <seq2seq>
    Modelos de lenguaje neurales <language-models>
    Modelos de industria <cognitive-services.ipynb>
+   Interpretación de modelos <interpret>
