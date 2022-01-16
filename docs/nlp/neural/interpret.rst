@@ -32,4 +32,4 @@ Existen diferentes técnicas para generar estos mapas:
    :caption: Ejemplos
 
    Explicaciones para NLP utilizando LIME <nlp_lime.ipynb>
-   saliency maps para NLP utilizando AllenNLP <allennlp_interpret.ipynb>
+   Saliency maps para NLP utilizando AllenNLP <allennlp_interpret.ipynb>
