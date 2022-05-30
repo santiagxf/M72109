@@ -11,7 +11,7 @@ Objetivos
 Los principales objetivos de este curso son:
 
 - Identificar los diferentes tipos de datos que se encuentran en las organizaciones, sus formatos, estructuras de almacenamiento y sistemas de consumo/consulta.
-- Comprender el concepto de aprendizaje profundo (Deep Learning) y el estado del arte.
+- -	Comprender el concepto de aprendizaje profundo (Deep Learning) y su relevancia en el procesamiento de datos no estructurados.
 - Comprender e implementar los principales métodos de procesamiento de lenguaje natural basados en texto (NLP).
 - Comprender e implementar los principales métodos de procesamiento de imágenes.
 - Comprender e implementar los principales métodos de procesamiento de audio ya sea de forma directa o mediante técnicas de texto-a-voz, voz-a-texto.

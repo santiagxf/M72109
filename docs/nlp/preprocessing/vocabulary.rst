@@ -1,15 +1,26 @@
 .. _nlp-vocabulary:
 
-El vocabulario
-==============
-¿Qué es?
---------
-En el contexto de NLP, el corpus de texto se refiere al conjunto de textos utilizados para una tarea particular. Por ejemplo, si estuviéramos construyendo un modelo para analizar artículos de noticias, nuestro corpus de texto sería el conjunto completo de artículos o trabajos que usamos para entrenar y evaluar el modelo. El conjunto de palabras únicas que se utilizan en el corpus se denomina vocabulario.
+Corpus, documento y vocabulario
+===============================
+
+Existen algunos conceptos importantes que vale la pena presentar y que utilizaremos a lo largo de toda esta sección. Estos conceptos son propios del procesamiento de lenguaje natural.
+
+Corpus
+------
+Llamamos *corpus* a todo el conjunto de datos sobre el cual un modelo de aprendizaje automático de NLP será entrenado y validado. Representa todo el conjunto de texto disponible. Por ejemplo, en el contexto de un modelo que detecta el sentimiento de las conversaciones telefónicas de un call center, el corpus sería el conjunto de todas las transcripciones de las llamadas telefónica disponibles.
+
+Documento
+---------
+Llamamos *documento* a cada una de las porciones de texto que componen el *corpus* y sobre las cuales nuestro modelo de aprendizaje automático debe operar. Es decir, que un *corpus* es un set de *documentos*. Por ejemplo, en el mismo contexto de un modelo que detecta el sentimiento de las conversaciones telefónicas de un call center, un documento sería cada una de las transcripciones disponibles (que corresponden a cada una de las llamadas) y sobre la que se quiere obtener el sentimiento.
+
+Vocabulario
+-----------
+Mientras el corpus de texto se refiere al conjunto total de textos utilizados para una tarea particular, llamamos vocabulario al conjunto de palabras únicas que aparecen en tal corpus.
 
 El concepto de **vocabulario** es importante ya que los modelos de aprendizaje automático no pueden trabajar con texto directamente, sino que necesitan representar las palabras como vectores. Para representar una palabra como un vector es necesario conocer el espacio en el cual la vamos a representar. Dicho espacio está definido por todas las palabras que son posible encontrar dentro del corpus, es decir el **vocabulario**. Ya sea que estamos trabajando con modelos clásicos o modelos de aprendizaje profundo, el concepto del **vocabulario** es clave ya que sus dimensiones afectan las representaciones de las palabras.
 
 Vocabularios a nivel de caracteres
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Además de utilizar las palabras de un corpus como vocabulario, también se puede utilizar un vocabulario basado en caracteres. En este caso, cada carácter único en el corpus (por ejemplo, cada letra, cada número) sería un elemento dentro del vocabulario. En general, nos centraremos en vocabularios basados ​​en palabras, que son mucho más comunes que sus homólogos basados ​​en caracteres pero tengan en cuenta que existen casos de uso donde quisieramos que nuestro modelo opere a nivel de caracteres en lugar de sobre palabras.
 
 Dilemas
