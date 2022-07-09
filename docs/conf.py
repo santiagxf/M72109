@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'M72.1.09'
-copyright = '2021, Universidad de Buenos Aires (FCE-UBA)'
+copyright = '2022, Universidad de Buenos Aires (FCE-UBA) - Profesores: Facundo Santiago, Javier Garcia Fronti'
 html_title = 'M72.1.09'
 author = 'Facundo Santiago'
 
