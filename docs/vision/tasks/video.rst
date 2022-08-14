@@ -28,11 +28,13 @@ Estos modelos tienen como objetivo realizar la interpolación entre dos cuadros,
 Modelos de procesamiento de video
 ---------------------------------
 
+.. warning:: El tema presentado en esta sección está clasificado como avanzado 😱. El entendimiento de este contenido es totalmente opcional.
+
 El procesamiento de video ofrece sus propios desafios principalmente por la cantidad de información de diferentes tipos que continene: imagenes, audio, dialogos, etc. Estos desafios deberemos atacarlos de alguna forma.
 
 .. toctree::
    :maxdepth: 1
    :caption: En esta sección veremos
 
-   Videos como secuencias <sequences/rnn>
-   Redes de convolución 3D <sequences/conv3d>
+   Videos como secuencias <video/rnn>
+   Redes de convolución 3D <video/conv3d>
