@@ -14,7 +14,7 @@ Los `Transformers`, por el contrario explotarán la capacidad de la arquitectura
 Como funcionan
 --------------
 
-Si recordamos de cuando introducimos :doc:`../vectorization/embeddings`, vimos que las representaciones de las palabras se obtenian al entrenar una red neuronal en una tarea "falsa" que era predecir una palabra dado el contexto en el que aparece. Este contexto lo especificabamos como una ventana de palabras. Los modelos basados en lenguaje, llevan esta tarea un paso más adelante y tratan de predecir la siguiente palabra dada una secuencia de palabras.
+Si recordamos de cuando introducimos :doc:`../vectorization/embeddings`, vimos que las representaciones de las palabras se obtenian al entrenar una red neuronal en una tarea "falsa" que era predecir una palabra dado el contexto en el que aparece. Este contexto lo especificabamos como una ventana de palabras. Los modelos basados en lenguaje, llevan esta tarea un paso más adelante y tratan de predecir la siguiente palabra dada una secuencia de palabras. Esta estrategía en principio simple ha demostrado capturar cierto grado de "entendimiento" en grandes modelos de lenguaje[1]_.
 
 En el caso de los transformers (en general - ya que depende mucho de la implementación), está pre-entrenado utilizando 2 tareas distintas:
 
@@ -33,7 +33,7 @@ En general, la arquitectura común de los modelos basados en Transformers es la 
 
   *Permitiendole al decoder acceder a las representaciones intermedias del encoder.*
 
-
+.. [1] Large Language Models are Zero-Shot Reasoners `arXiv:2205.11916<https://arxiv.org/abs/2205.11916>`_.
 
 .. toctree::
    :maxdepth: 1
