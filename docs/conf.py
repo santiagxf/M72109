@@ -73,6 +73,9 @@ myst_update_mathjax = False
 # autosectionlabel_prefix_document = True
 # autosectionlabel_maxdepth = 2
 
+# Disable notebook execution
+nbsphinx_execute = 'never'
+
 nbsphinx_prolog = """
 .. raw:: html
 
