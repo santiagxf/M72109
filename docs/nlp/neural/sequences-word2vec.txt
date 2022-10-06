@@ -8,3 +8,4 @@ spacy==2.3.5
 unidecode
 scikit-learn
 gensim==3.8.3
+importlib-metadata==4.13.0
