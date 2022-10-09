@@ -11,7 +11,7 @@ En el procesamiento de texto tradicional, las características o predictores gen
 Representaciones y aprendizaje profundo
 ---------------------------------------
 
-El concepto de representaciones es central para la idea de deep learning. Más aún, se podría decir que la capacidad de aprender estas representaciones de forma no supervisada y automática es el centro de porque deep learning funciona tan bien. Sin embargo, esto viene con un precio. En el caso de las representaciones lineales, estas son interpretables en el sentido que podemos asignarle un significado a cada dimensión dentro del vector. Sin embargo en deep learning, esto no es generalmente el caso ya que suelen aprender representaciones que incluso están compuestas por multiples capas donde los valores de una capa dependen de las anteriores. 
+El concepto de representaciones es central para la idea de deep learning. Más aún, se podría decir que la capacidad de aprender estas representaciones de forma no supervisada y automática es el centro del por qué deep learning funciona tan bien. Sin embargo, esto conlleva un precio. Si pensamos en el caso de las representaciones lineales, estas son interpretables en el sentido de que podemos asignarle un significado a cada dimensión dentro del vector. Sin embargo, en deep learning este no es generalmente el caso ya que suelen aprender representaciones multidimensionales que incluso están compuestas por multiples capas donde los valores de una capa dependen de las anteriores. 
 
 .. toctree::
    :maxdepth: 1
