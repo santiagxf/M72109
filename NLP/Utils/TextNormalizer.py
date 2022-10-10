@@ -43,8 +43,8 @@ class TweetTextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMi
         if strip_stopwords:
             nltk.download("stopwords", quiet=True)
             self.stopwords = set(stopwords.words(language)) # Instanciamos las stopwords en español
-            self.strip_stopwords = strip_stopwords
-
+        
+        self.strip_stopwords = strip_stopwords
         self.strip_accents = strip_accents
         self.strip_urls = strip_urls
         self.urls_regex = re.compile('http\S+') # Usamos una expresion regular para encontrar las URLs
