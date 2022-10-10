@@ -42,3 +42,4 @@ En general, la arquitectura común de los modelos basados en Transformers es la 
 
    BERT: Bidirectional Encoder Representations from Transformers <BERT.ipynb>
    BERT en un problema de clasificación <BERT_classification.ipynb>
+   BERT en un problema de clustering <bertopic.ipynb>
