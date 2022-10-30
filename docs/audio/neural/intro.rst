@@ -22,7 +22,7 @@ Los modelos neurales para el procesamiento de audio, ya sean utilizando secuenci
 :Modelos basados en redes neurales convolucionales: Estas redes utilizan capas de convolución de 1 dimensión (tiempo) o 2 dimensiones (tiempo-frencuencia) para computar predictores (feature maps) útiles para la tarea a resolver. Al igual que con imágenes, capas de pooling suelen ser agregadas para reducir la dimensionalidad de los predictores que se aprenden. :ref:`YAMNet <yamnet_class.ipynb>` es un ejemplo de este tipo de modelos. 
 :Modelos basados en redes recurrentes: Estos modelos computan un estado latente intermedio por cada paso de la secuencia y por lo tanto pueden capturar dependencias temporales en las mismas. Ademas de modelar diractamente secuencias temporales, estos modelos pueden ser extendidos para modelar la señal en los dominios de frecuencia-tiempo. Modelos como TF-LSTM (Time-Frequency LSTM) son alternativas a las CNNs, las cuales capturan la correlación entre diferentes frencuencias y por lo tanto pueden ser utilizadas para modelar tanto relaciones temporales como espectrales. Alternativamente, RNNs pueden ser utilizadas para procesar la salida de una red CNN. Estas arquitecturas suelen llamarse CRNN (Convolutional Recurrent Neural Network).
 
-Para una lectura más en profundidad de estas técnicas se recomienda la lectura: `Deep Learning for Audio Signal Processing <https://arxiv.org/abs/1905.00078#>`_.
+.. note:: Para una lectura más en profundidad de estas técnicas se recomienda la lectura: `Deep Learning for Audio Signal Processing <https://arxiv.org/abs/1905.00078#>`_.
 
 .. toctree::
    :maxdepth: 1
