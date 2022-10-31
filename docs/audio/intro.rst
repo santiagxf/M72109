@@ -37,4 +37,8 @@ Cada una de estas medidas se denomina **muestreo** y la frecuencia de muestreo e
 
   *Sampling rate* `Fuente. <https://www.masteringthemix.com/blogs/learn/113159685-sample-rates-and-bit-depth-in-a-nutshell>`_
 
-   
+.. toctree::
+   :maxdepth: 1
+   :caption: En esta sección veremos
+
+   tasks
