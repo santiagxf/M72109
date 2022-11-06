@@ -7,11 +7,13 @@ Los modelos de aprendizaje profundo han sido adoptados ampliamente para el proce
 Ingeniería de predictores
 -------------------------
 
-En general, es importante generar las representaciones correctas con las cuales codificar la información antes de suministrarla a nuestros modelos de aprendizaje automático. Una desventaja de la ingeniera de predictores es que el preprocesamiento realizado en estos predictores podría no ser óptimo para la tarea en cuestión. Los modelos basados en aprendizaje profundo en general están diseñados para realizar esta tarea de forma no supervisada y aprender una representación útil para la tarea a resolver.
+En general, es importante generar las representaciones correctas con las cuales codificar la información antes de suministrarla a nuestros modelos de aprendizaje automático. Sin embargo, una desventaja de la ingeniera de predictores es que el preprocesamiento realizado en estos predictores podría no ser óptimo para la tarea en cuestión. Los modelos basados en aprendizaje profundo en general están diseñados para realizar esta tarea de forma no supervisada y aprender una representación útil para la tarea a resolver durante el proceso de aprendizaje.
 
-Por decadas la utilización de espectogramas ha sido una de las técnicas más frecuentes a la hora de generar representaciones para el procesamiento de audio. Por lo tanto, muchos modelos (incluso modelos basados en aprendizaje profundo) utilizan estas transformaciones como representaciones iniciales. Veremos un ejemplo de estos modelos en la sección :doc:`spectogram`.
+Por decadas la utilización de espectogramas ha sido una de las técnicas más frecuentes a la hora de generar representaciones para el procesamiento de audio. Dado su amplio éxito, muchos modelos (incluso modelos basados en aprendizaje profundo) utilizan estas transformaciones como representaciones iniciales. Veremos un ejemplo de estos modelos en la sección :doc:`spectogram`.
 
-Para evitar tener que diseñar estas transformaciones, varios métodos han sido propuestos para simplificar el proceso de extracción de predictores y pasar a una estrategia totalmente basada en aprendizaje automático. Esto significa que estas transformaciones son aprendidas como parte del proceso de optimización del modelo utilizando directamente la información de la onda de sonido.
+En aquellos modelos donde buscamos evitar tener que diseñar estas transformaciones, existen varios métodos que buscan simplificar el proceso de extracción de predictores y pasar a una estrategia totalmente basada en aprendizaje automático. Esto significa que estas transformaciones son aprendidas como parte del proceso de optimización del modelo utilizando directamente la información de la onda de sonido.
+
+.. note: Esta fuera del alcance de este curso la exploración de arquitecturas neurales que aprendan esta representaciones de forma no supervisada. Queda a disposición del alumno explorar las mismas. 
 
 
 Modelos
