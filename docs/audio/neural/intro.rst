@@ -11,9 +11,9 @@ En general, es importante generar las representaciones correctas con las cuales 
 
 Por decadas la utilización de espectogramas ha sido una de las técnicas más frecuentes a la hora de generar representaciones para el procesamiento de audio. Dado su amplio éxito, muchos modelos (incluso modelos basados en aprendizaje profundo) utilizan estas transformaciones como representaciones iniciales. Veremos un ejemplo de estos modelos en la sección :doc:`spectogram`.
 
-En aquellos modelos donde buscamos evitar tener que diseñar estas transformaciones, existen varios métodos que buscan simplificar el proceso de extracción de predictores y pasar a una estrategia totalmente basada en aprendizaje automático. Esto significa que estas transformaciones son aprendidas como parte del proceso de optimización del modelo utilizando directamente la información de la onda de sonido.
+En aquellos modelos donde buscamos evitar tener que diseñar estas transformaciones, existen varios métodos que buscan simplificar el proceso de extracción de predictores y pasar a una estrategia totalmente basada en aprendizaje automático. Esto significa que estas transformaciones son aprendidas como parte del proceso de optimización del modelo utilizando directamente la información de la onda de sonido. Por ejemplo, los autores H. Lee, Y. Largman, P. Pham and Andrew Y. Ng.  exploran estas ideas en el paper `Unsupervised feature learning for audio classification using convolutional deep belief networks. 2009 <https://ai.stanford.edu/~ang/papers/nips09-AudioConvolutionalDBN.pdf>`_.
 
-.. note: Esta fuera del alcance de este curso la exploración de arquitecturas neurales que aprendan esta representaciones de forma no supervisada. Queda a disposición del alumno explorar las mismas. 
+.. note:: Esta fuera del alcance de este curso la exploración de arquitecturas neurales que aprendan esta representaciones de forma no supervisada. Queda a disposición del alumno explorar las mismas. 
 
 
 Modelos
