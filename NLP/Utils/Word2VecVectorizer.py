@@ -14,7 +14,7 @@ import sklearn
 import gensim.downloader
 from gensim.models import KeyedVectors
 from gensim.test.utils import datapath
-
+from tqdm import tqdm
 # -
 
 class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
@@ -59,7 +59,7 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
         
         # Construirmos la matriz manualmente
         wv_matrix = (np.random.rand(self.vocab_size, self.emdedding_size) - 0.5) / 5.0
-        for word in self.embeddings.vocab:
+        for word in tqdm(self.embeddings.vocab):
             try:
                 wv_matrix[self.word2idx(word)] = self.get_vector(word)
             except:
