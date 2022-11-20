@@ -38,7 +38,7 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
         if lemmatize:
             try:
                 self.parser = spacy.load(LANGUAGE_MODULES[language])
-            except Error:
+            except Exception:
                 raise ImportError(f'El modelo de procesamiento de texto en {language} no está instalado. Ejecute python -m spacy {LANGUAGE_MODULES[language]} para instalarlo.')
             self.lemmatizer = lambda word : " ".join([token.lemma_ for token in self.parser(word)]) # Creamos un lemmatizer
         else:
