@@ -56,7 +56,7 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     def process_text(self, text):
         """Procesa una secuencia de texto de acuerdo a la configuración del normalizador. Este método
         devuelve una secuencia de tokens."""
-        if not preserve_case:
+        if not self.preserve_case:
             text = texto.lower()
 
         tokens = self.tokenizer.tokenize(text)
