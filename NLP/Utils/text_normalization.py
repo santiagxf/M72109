@@ -16,6 +16,11 @@ from nltk.corpus import stopwords
 from nltk.tokenize.casual import TweetTokenizer
 from nltk.tokenize.api import TokenizerI
 
+LANGUAGE_MODULES = {
+    'spanish': 'es_core_news_sm',
+    'english': 'en_core_web_sm'
+}
+
 class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     def __init__(self, tokenizer:TokenizerI, language:str='spanish', lemmatize:bool=True, stem:bool=False, strip_stopwords:bool=True, 
                  strip_urls:bool=True, strip_accents=True, token_min_len:int=-1, preserve_case:bool=True, text_to_sequence:bool=False):
@@ -32,11 +37,9 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
         
         if lemmatize:
             try:
-                import es_core_news_sm as spa
-            
-                self.parser = spa.load() # Cargamos el parser en español
+                self.parser = spacy.load(LANGUAGE_MODULES[language])
             except ImportError:
-                raise ImportError('El modelo en español no está instalado. Ejecute python -m spacy download en_core_web_sm')
+                raise ImportError(f'El modelo en {language} no está instalado. Ejecute python -m spacy {LANGUAGE_MODULES[language]} para instalarlo.')
             self.lemmatizer = lambda word : " ".join([token.lemma_ for token in self.parser(word)]) # Creamos un lemmatizer
         else:
             self.lemmatizer = False
