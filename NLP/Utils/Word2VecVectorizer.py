@@ -81,7 +81,7 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
         """
         return self.embeddings.wv.index2word[idx]
     
-    def sequence_to_text(seqs):
+    def sequence_to_text(self, seqs):
         """Devuelve el texto asociado a una secuencia de IDs de vectores de word2vec."""
         return [' '.join([self.idx2word(idx) for idx in seq]) for seq in seqs]
     
