@@ -84,6 +84,7 @@ A pesar de que los métodos neurales son potentes, también tienen sus limitacio
 
    Modelos de lenguaje con Attention <attention>
    Modelos de lenguaje con Transformers <transformers>
+   Grandes Modelos de Lenguaje <llm>
 
 
 
