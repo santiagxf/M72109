@@ -46,4 +46,4 @@ Interpretación de modelos
     :caption: Ejemplos
     :glob:
 
-    interpret/*/*
+    interpret/*
