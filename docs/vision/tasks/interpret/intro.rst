@@ -1,5 +1,5 @@
-Interpretación de modelos de visión por computadora
-===================================================
+Interpretación de modelos
+=========================
 
 Ejemplos
 --------
