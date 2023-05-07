@@ -62,6 +62,5 @@ Las técnicas de visión por computadora se enfrentan a grandes desafios propios
    :hidden:
 
    Principales tareas en el procesamiento de imágines <tasks>
-   Procesamiento de imágenes <pipeline>
    Obtener conjuntos de datos de imágenes <getting-data.ipynb>
    Anotaciones <annotations.ipynb>
