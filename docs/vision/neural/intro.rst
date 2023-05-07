@@ -17,4 +17,4 @@ Estos modelos están basados en el concepto de :doc:`representations` y sus arqu
 
    Aprendizaje por representaciones <representations>
    Red Neuronal Convolucional <cnn>
-   Arquitectura de redes basadas en CNN <cnn_architecture>
+   Transformers para vision <transformers>
