@@ -165,3 +165,9 @@ Las capas completamente conectadas son exactamente las mismas que utilizamos en 
   model.add(layers.Flatten()) # Vector unidimensional
   model.add(layers.Dense(10), activation='softmax') # Clasificador
 
+.. toctree::
+  :maxdepth: 2
+  :caption: En esta sección
+  :hidden:
+    
+  Arquitectura de redes basadas en CNN <cnn_architecture>
