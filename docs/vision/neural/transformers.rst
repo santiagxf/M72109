@@ -31,6 +31,11 @@ Representation learning
 
 Mencionamos que uno de los conceptos más importantes en visión por computadora es la idea de :doc:`resentations`. Es válido preguntarse si los mismos conceptos pueden ser aplicados o son aplicados a modelos basados en transformers. Ha sido demostrado empiricamente que los bloques de atención en las capas mas tempranas de la red tienden a presetar atención (attend) a pixeles que se encuentras tanto cerca como lejos los unos de los otros, demostrando la habilidad del modelo de integrar información de forma global (la distancia entre los puntos a los que el modelo presta atención podría interpretarce de forma análoga al *receptive field* en CNN). Sin embargo, a medida que avanzamos en la profundidad de la red, vemos que estos bloques tienen a prestar atención a regiones más distantes de la imagen, dando a entender que los mismos toman conceptos más distribuidos, semanticamente relevantes.
 
+.. figure:: ../_images/vit-head-distance.png
+  :alt: Distribución de la atención en las diferentes capas
+
+  *Distribución de la atención en las diferentes capas, mostrando como capas mas tempranas tienden a atender pixeles vecinos como pixeles que se encuentran alejados, mientras que capas más profundas tienden a atender a regiones más distantes.*
+
 Los modelos basados en CNN poseen lo que se conoce como *inductive bias*, el cual hace referencia al sezgo que el modelo posee debido a la arquitectura y las restricciones de los argoritmos de aprendizaje. Particularmente, los conceptos de traslación y localidad terminan siendo útiles en conjuntos de datos pequeños. Sin embargo, a medida que los conjuntos de datos aumentan, aprender estos patrones directamente resulta suficiente, e incluso beneficioso como se muestra en las arquitecturas de transformers.
   
 Ejemplos
