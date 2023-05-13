@@ -33,7 +33,7 @@ En general, la arquitectura común de los modelos basados en Transformers es la 
 
   *Permitiendole al decoder acceder a las representaciones intermedias del encoder.*
 
-.. [1] Large Language Models are Zero-Shot Reasoners `arXiv:2205.11916<https://arxiv.org/abs/2205.11916>`_.
+.. [1] `Large Language Models are Zero-Shot Reasoners <https://arxiv.org/abs/2205.11916>`_.
 
 .. toctree::
    :maxdepth: 1
