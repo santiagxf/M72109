@@ -1,15 +1,15 @@
 Diffusers para visión
 =====================
 
-Rencientemente, los modelos generativos de imágenes han tenido un gran impulso en el ámbito de visión por computadora. Modelos como `OpenAI DALL-E<https://openai.com/product/dall-e-2>`_ han demostrado ser extremadamente eficientes en generar imágenes sintéticamente con gran fidelidad. Estos modelos, están basados en el concepto de **difusores** o en Inglés **diffusers** los cual proponen una arquitectura específica para generar imágenes sintéticamente demostrando gran capacidad.
+Rencientemente, los modelos generativos de imágenes han tenido un gran impulso en el ámbito de visión por computadora. Modelos como `OpenAI DALL-E <https://openai.com/product/dall-e-2>`_ han demostrado ser extremadamente eficientes en generar imágenes sintéticamente con gran fidelidad. Estos modelos, están basados en el concepto de **difusores** o en Inglés **diffusers** los cual proponen una arquitectura específica para generar imágenes sintéticamente demostrando gran capacidad.
 
 
 Introducción
 ------------
 
-La idea detras de diffusers fué introducida en el paper `Deep Unsupervised Learning using Nonequilibrium Thermodynamics<https://arxiv.org/abs/1503.03585>`_ en 2015. Sin embargo, no pasó a la primera plana hasta el 2021 donde estos modelos superaron a los modelos basados en convolución y GANs. Si bien los modelos basados en GAN demostraron ser el estado del arte durante mucho tiempo, los mismos no logran capturar por completo la diversidad de la distribución de las imágenes (la cual es altamente compleja). Esto se debe a que los modelos basados en GANs prefieren fidelidad antes que diversidad (es decir que prefieren generar imágenes de alta definición aunque sin capturar todo el espacio de posibilidades). Además, estos modelos son complejos de entrenar, principalmente por su capacidad de colapsar fácilmente durante el entrenamiento si no se utilizan los hiperparámetros correctos.
+La idea detras de diffusers fué introducida en el paper `Deep Unsupervised Learning using Nonequilibrium Thermodynamics <https://arxiv.org/abs/1503.03585>`_ en 2015. Sin embargo, no pasó a la primera plana hasta el 2021 donde estos modelos superaron a los modelos basados en convolución y GANs. Si bien los modelos basados en GAN demostraron ser el estado del arte durante mucho tiempo, los mismos no logran capturar por completo la diversidad de la distribución de las imágenes (la cual es altamente compleja). Esto se debe a que los modelos basados en GANs prefieren fidelidad antes que diversidad (es decir que prefieren generar imágenes de alta definición aunque sin capturar todo el espacio de posibilidades). Además, estos modelos son complejos de entrenar, principalmente por su capacidad de colapsar fácilmente durante el entrenamiento si no se utilizan los hiperparámetros correctos.
 
-OpenAI, en el paper `Diffusion Models Beat GANs on Image Synthesis (2021) <https://arxiv.org/pdf/2105.05233v4.pdf>`_, propuso mejoras que llevaron a la técnica a un nuevo estandar. Finalemnte, `High-Resolution Image Synthesis with Latent Diffusion Models (2022)<https://arxiv.org/pdf/2112.10752.pdf>`_ introdujo mejoras en el proceso de generación que permitieron tener resultados sin precedentes en altas resoluciones. 
+OpenAI, en el paper `Diffusion Models Beat GANs on Image Synthesis (2021) <https://arxiv.org/pdf/2105.05233v4.pdf>`_, propuso mejoras que llevaron a la técnica a un nuevo estandar. Finalemnte, `High-Resolution Image Synthesis with Latent Diffusion Models (2022) <https://arxiv.org/pdf/2112.10752.pdf>`_ introdujo mejoras en el proceso de generación que permitieron tener resultados sin precedentes en altas resoluciones. 
 
 
 Modelos probabilísticos de difusión
@@ -104,12 +104,22 @@ El proceso de generación puede ser condicionado de multiples formas:
 - Condicionado por texto y una imagen incial.
 - Condicionado por audio.
 
-Los hoy en día populares :doc:`code/stable_diffusion.ipynb` son un tipo de *conditioned diffusion models*.
+Los hoy en día populares :doc:`code/stable_diffusion.ipynb` son un tipo de *conditioned diffusion models*. Estas arquitecturas conectan el modelo UNet con un modelo basado en transformers que le permite condicionarlo por información que es almacenada en tokens.
 
 
 Latent Diffusion Models
 -----------------------
 
+A pesar de que los DMs demuestran un gran potencial para generar imágenes, sufren de un problema importante que es su costo computacional. Entrenar y evaluar estos modelos requiere computar de forma repetitiva funciones (y gradientes) en un espacio altamente dimensional (RGB). En paper `High-Resolution Image Synthesis with Latent Diffusion Models (2022) <https://arxiv.org/pdf/2112.10752.pdf>`_ introdujo el concepto de "Latent Diffusion Models", el cual ataca este problema directamente.
+
+En lugar de utilizar las imagenes RGB directamente, primero entrena un autoencoder el cual provee un espacio dimensional comprimido (y por ende más eficiente) que es perceptivamente equivalente al espacio original de las imágenes. Luego, las arquitecturas de DMs son entrenadas sobre este espacio dimensional, el cual le permite a la técnica escalar más eficientemente. Otra ventaja de esta modalidad es que el autoencoder es universal, y puede ser utilizado en multiples DMs sin necesidad de ser reentrenado.
+
+Dado que los DMs pueden explotar efectivamente la *localidad* de las carácteristicas, la arquitectura del autoencoder no necesita comprimir execivamente el espacio y por ende utiliza embeddings en un espacio de 2D, lo cual resulta atractivo para la arquitecture UNet que utiliza capaz convolucionales. Adicionalmente, el **encoder** también reduce la resolución de la imagen inicial antes de pasar por el proceso de autoencoding. 
+
+.. figure:: _images/ldm_architecture.png
+  :alt: Arquitectura de Stable Diffusion.
+  
+  *Arquitectura de Stable Diffusion.*
 
 
 Ejemplos
