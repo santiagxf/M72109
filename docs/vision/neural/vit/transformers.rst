@@ -1,13 +1,13 @@
 Arquitecturas basadas en transformers
 =====================================
 
-La arquitectura de :doc:`../nlp/neural/transformers` cambió radicalmente el estado del arte en las tareas de procesamiento de texto. Sin embargo, en el campo de visión por computadora, todos los modelos mayoritariamente descansan en la arquitectura CNN. Esto permaneció de esta forma hasta que, sobre fines de 2020, Google propuso una arquitectura para el procesamiento de imágenes basada en transformers, Vision Transformer (ViT). Las arquitecturas de modelos de visión por computadora basadas en transformers fueron propuestas en el paper `An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale <https://arxiv.org/abs/2010.11929>`_. 
+La arquitectura de :doc:`../../../nlp/neural/transformers` cambió radicalmente el estado del arte en las tareas de procesamiento de texto. Sin embargo, en el campo de visión por computadora, todos los modelos mayoritariamente descansan en la arquitectura CNN. Esto permaneció de esta forma hasta que, sobre fines de 2020, Google propuso una arquitectura para el procesamiento de imágenes basada en transformers, Vision Transformer (ViT). Las arquitecturas de modelos de visión por computadora basadas en transformers fueron propuestas en el paper `An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale <https://arxiv.org/abs/2010.11929>`_. 
 
 Fundamentos
 -----------
 Para poder utilizar imágenes dentro de una arquitectura basada en :doc:`../nlp/neural/transformers`, las imágenes son segmentadas (o "divididas") en pequeños parches cuadrados, los cuales son linearmente proyectados a las dimensiones de entrada que la arquitectura del transformer utiliza. La secuencia de parches resultante es injectada en un transformer tradicional. Podríamos pensar en aplicar la arquitectura de transformers directamente sobre los pixeles de las imágenes. Sin embargo, esto requeriría que cada pixels pueda "prestar atención" (attend) a cada uno de los pixeles restantes. Es conocido que las arquitecturas de atención escalan cuadraticamente con respecto al tamaño de la entrada, lo que hace esta técnica inviable en el mundo de imágenes.
 
-.. figure:: ../_images/state_vit_architecture.png
+.. figure:: ../../_images/state_vit_architecture.png
   :alt: Arquitectura básica de ViT.
 
   *Arquitectura básica de ViT*
@@ -31,7 +31,7 @@ Representation learning
 
 Mencionamos que uno de los conceptos más importantes en visión por computadora es la idea de :doc:`resentations`. Es válido preguntarse si los mismos conceptos pueden ser aplicados o son aplicados a modelos basados en transformers. Ha sido demostrado empiricamente que los bloques de atención en las capas mas tempranas de la red tienden a presetar atención (attend) a pixeles que se encuentras tanto cerca como lejos los unos de los otros, demostrando la habilidad del modelo de integrar información de forma global (la distancia entre los puntos a los que el modelo presta atención podría interpretarce de forma análoga al *receptive field* en CNN). Sin embargo, a medida que avanzamos en la profundidad de la red, vemos que estos bloques tienen a prestar atención a regiones más distantes de la imagen, dando a entender que los mismos toman conceptos más distribuidos, semanticamente relevantes.
 
-.. figure:: ../_images/vit-head-distance.png
+.. figure:: ../../_images/vit-head-distance.png
   :alt: Distribución de la atención en las diferentes capas
 
   *Distribución de la atención en las diferentes capas, mostrando como capas mas tempranas tienden a atender pixeles vecinos como pixeles que se encuentran alejados, mientras que capas más profundas tienden a atender a regiones más distantes.*
@@ -46,4 +46,4 @@ Ejemplos
     :caption: Ejemplos
     :glob:
 
-    vit/code/*
+    code/*
