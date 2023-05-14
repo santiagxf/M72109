@@ -12,7 +12,7 @@ A alto nivel, la arquitectura de una red neural convolucional esta compuesta por
 - Una o multiples capas completamente conectadas.
 - Un estimador.
 
-.. figure:: ../_images/architecture_cnn.png
+.. figure:: ../../_images/architecture_cnn.png
   :alt: Pooling
 
 
@@ -21,7 +21,7 @@ Extracción de predictores
 
 Podemos pensar de este paso cómo la capacidad del modelo de tomar las imágenes de entrada y dividirlas en pequeñas piezas que representan características o predictores interesantes. Estas características luego son apiladas en un vector para luego ser utilizada, por ejemplo, por un clasificador.
 
-.. figure:: ../_images/architecture_features.png
+.. figure:: ../../_images/architecture_features.png
   :alt: Feature extraction
 
   *Extracción de predictores*
@@ -30,7 +30,7 @@ En general apilaremos una :ref:`capa convolucional <rst_cnn_conv_layer>` seguida
 
 Cuando aplicamos esta estructura de forma repetitiva, el resultado es un proceso que va desde *feature maps* conceptuales a *features* densas:
 
-.. figure:: ../_images/architecture_cnn_pool.png
+.. figure:: ../../_images/architecture_cnn_pool.png
   :alt: Modificación de las dimensiones de las imágenes
 
   *Modificación de las dimensiones de las imágenes durante la extracción de predictores*

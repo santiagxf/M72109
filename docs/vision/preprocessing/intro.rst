@@ -4,7 +4,7 @@ Procesamiento de imágenes
 
 Una aplicación que utiliza las técnicas de visión por computadora en general deberá de implementar una secuencia de pasos que permiten mapear desde las imágenes de entrada hasta la salida que la aplicación necesita. Esta secuencia de pasos se conoce como `pipeline`. Esta secuencia de pasos puede variar de caso en caso, pero en general siguen la siguiente secuencia:
 
-.. figure:: _images/pipeline_vision.png
+.. figure:: ../_images/pipeline_vision.png
 
   *Origen: Deep Learning for Vision Systems* [1]_
 
@@ -21,7 +21,7 @@ Imágenes como tensores
 
 Desde el punto de vista de una computadora, las imágenes no son más que un conjunto de intensidades que representan cada uno de los pixeles de la imágen. En general podemos verlas como una matriz de dimensiones `ancho x alto` de cada imágen. Sin embargo, desde un punto de vista más general podemos pensar en una imágen como un tensor de dimensiones `ancho, alto, numero-de-canales`. Donde `numero-de-canales` en general será 1 para una imagen en blanco y negro, y 3 para una imágen en color en formato RGB.
 
-.. figure:: _images/pipeline_color.png
+.. figure:: ../_images/pipeline_color.png
   :alt: Representación de imagenes en color en RGB
 
   *Representación de imagenes en color en RGB*
@@ -50,7 +50,7 @@ Dependiendo del problema que estamos intentando resolver, será el tipo de prepr
   - Filtros específicos (borronear, ruido).
   - Combinar imagenes o recortarlas.
 
-.. figure:: _images/pipeline_augmentation.png
+.. figure:: ../_images/pipeline_augmentation.png
   :alt: Aumento o augmentation del conjunto de datos
 
   *Aumento o augmentation del conjunto de datos*

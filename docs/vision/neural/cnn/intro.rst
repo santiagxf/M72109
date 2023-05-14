@@ -17,7 +17,7 @@ Las redes basadas en CNN o **Red Neuronal Convolucional** ofrecen soluciones sim
 #. Se organizan las neuronas en una estructura tridimensional: alto, ancho y profundidad.
 #. A diferencia de las redes completamente conectadas, donde las neuronas están conectadas a todos los elementos de la capa anterior, aquí cada neurona solo tiene acceso a los elementos en la región cirundante. Esta región (generalmente cuadrada y que abarca todos los canales) se denomina campo receptivo o **receptive field** de la neuronas y sus dimensiones están dadas por el **tamaño del filtro**:
 
-.. figure:: ../_images/cnn_locality.png
+.. figure:: ../../_images/cnn_locality.png
   :alt: Representación de imagenes
 
   *(Izquierda) Red neuronal completamente conectada donde todas las neuronas están conectadas a todos los píxeles de la imagen. (Derecha) Red conectada localmente donde solo un subconjunto de píxeles está conectado a cada neurona.*
@@ -48,7 +48,7 @@ Esto nos da propiedades muy interesantes:
 
 La respuesta de un filtro sobre una imagen de entrada representa todas las ubicaciones donde el filtro fue activado en relación a la feature que representa. Es decir, podemos pensarlo como el resultado de detectar el filtro en cada parte de la imagen. Estos resultados se los suele llamar **feature map**. Una capa entonces que tiene N filtros retornará N diferentes **feature maps**.
 
-.. figure:: ../_images/cnn_activation.gif
+.. figure:: ../../_images/cnn_activation.gif
   :alt: Ejemplo de convolución
 
   *Mapa de activaciones*
@@ -118,7 +118,7 @@ Los parámetros de este tipo de capa son:
 :Stride: Cuyo significado es el mismo que en la capa de convolución. En general este valor es igual al tamaño del filtro que se utilizó en la capa de convolución. El objetivo de esto es evitar que el mecanismo de pooling se *solape* en varias regiones de la imagen de entrada.
 :Padding: Cuyo signficado es el mismo que en la capa de convolución.
 
-.. figure:: ../_images/cnn_pool.png
+.. figure:: ../../_images/cnn_pool.png
   :alt: Pooling
 
   *Pooling*
@@ -148,7 +148,7 @@ Los parametros `padding` o `strike` no fueron indicados, lo que significa que ut
 
 .. note:: Note como esta capa no reduce la cantidad de filtros resultantes, sino que reduce las dimensiones de los mismos.
 
-.. figure:: ../_images/cnn_pooling.gif
+.. figure:: ../../_images/cnn_pooling.gif
   :alt: Pooling
 
   *Pooling*
@@ -173,4 +173,3 @@ Las capas completamente conectadas son exactamente las mismas que utilizamos en 
     
   Arquitectura de redes basadas en CNN <cnn_architecture>
   classification/code/*
-  detection/code/*
