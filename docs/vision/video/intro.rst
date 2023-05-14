@@ -36,5 +36,5 @@ El procesamiento de video ofrece sus propios desafios principalmente por la cant
    :maxdepth: 1
    :caption: En esta sección veremos
 
-   Videos como secuencias <video/rnn>
-   Redes de convolución 3D <video/conv3d>
+   Videos como secuencias <rnn>
+   Redes de convolución 3D <conv3d>
