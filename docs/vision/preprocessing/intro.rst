@@ -60,7 +60,7 @@ Las tareas de estandarización tiene como objetivo suministrar el modelo de apre
 Ejemplos
 ^^^^^^^^
 
-Para ver un ejemplo de transformaciones para el aumento del conjunto de datos de entrenamiento puede revisar el ejemplo :ref:`../neural/cnn/classification/code/cnn_class_augmentation.ipynb`. Sin embargo, el mismo introduce algunos conceptos que se verán más adelante. Refierase solo a la sección de aumento del conjunto de datos utilizando la librería `TensorFlow`.
+Para ver un ejemplo de transformaciones para el aumento del conjunto de datos de entrenamiento puede revisar el ejemplo :doc:`../neural/cnn/classification/code/cnn_class_augmentation.ipynb`. Sin embargo, el mismo introduce algunos conceptos que se verán más adelante. Refierase solo a la sección de aumento del conjunto de datos utilizando la librería `TensorFlow`.
 
 Existen otros servicios en la nube, como `RoboFlow` el cual permite realizar tareas de data augmentation de forma automática.
 
