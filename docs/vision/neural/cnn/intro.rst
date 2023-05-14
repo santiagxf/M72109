@@ -168,6 +168,9 @@ Las capas completamente conectadas son exactamente las mismas que utilizamos en 
 .. toctree::
   :maxdepth: 2
   :caption: En esta sección
+  :glob:
   :hidden:
     
   Arquitectura de redes basadas en CNN <cnn_architecture>
+  classification/code/*
+  detection/code/*

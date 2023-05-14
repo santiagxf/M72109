@@ -31,10 +31,9 @@ Gestión y análisis de datos no estructurados
    :caption: Procesamiento de imágenes
 
    Introducción <vision/intro>
-   Procesamiento de imágenes <preprocessing/intro>
-   Arquitecturas neurales <vision/neural/intro>
-   Modelos para imágenes <vision/tasks/images>
-   Modelos para video <vision/tasks/video>
+   Procesamiento de imágenes <vision/preprocessing/intro>
+   Modelos neurales <vision/neural/intro>
+   Modelos neurales para video <vision/video/intro>
    Estado del arte <vision/state-of-the-art>
 
 

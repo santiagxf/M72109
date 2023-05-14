@@ -16,6 +16,7 @@ Estos modelos están basados en el concepto de :doc:`representations` y sus arqu
    :hidden:
 
    Aprendizaje por representaciones <representations>
-   Redes neuronales convolucionales <cnn>
-   Transformers para vision <transformers>
-   Diffusers <diffusers>
+   Redes neuronales convolucionales <cnn/intro>
+   Transformers para vision <vit/transformers>
+   Diffusers <diffusers/intro>
+   Interpretación de modelos <interpret/intro>
