@@ -46,4 +46,5 @@ Ejemplos
     :caption: Ejemplos
     :glob:
 
-    code/*
+    code/vit_classification.ipynb
+    code/dino.ipynb
