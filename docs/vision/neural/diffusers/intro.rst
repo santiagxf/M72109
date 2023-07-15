@@ -114,7 +114,9 @@ A pesar de que los DMs demuestran un gran potencial para generar imágenes, sufr
 
 En lugar de utilizar las imagenes RGB directamente, primero entrena un autoencoder el cual provee un espacio dimensional comprimido (y por ende más eficiente) que es perceptivamente equivalente al espacio original de las imágenes. Luego, las arquitecturas de DMs son entrenadas sobre este espacio dimensional, el cual le permite a la técnica escalar más eficientemente. Otra ventaja de esta modalidad es que el autoencoder es universal, y puede ser utilizado en multiples DMs sin necesidad de ser reentrenado.
 
-Dado que los DMs pueden explotar efectivamente la *localidad* de las carácteristicas, la arquitectura del autoencoder no necesita comprimir execivamente el espacio y por ende utiliza embeddings en un espacio de 2D, lo cual resulta atractivo para la arquitecture UNet que utiliza capaz convolucionales. Adicionalmente, el **encoder** también reduce la resolución de la imagen inicial antes de pasar por el proceso de autoencoding. 
+Dado que los DMs pueden explotar efectivamente la *localidad* de las carácteristicas, la arquitectura del autoencoder no necesita comprimir execivamente el espacio y por ende utiliza embeddings en un espacio de 2D, lo cual resulta atractivo para la arquitecture UNet que utiliza capaz convolucionales. Adicionalmente, el **encoder** también reduce la resolución de la imagen inicial antes de pasar por el proceso de autoencoding.
+
+El conocido y popular modelo Stable Diffusion implementa esta arquitectura.
 
 .. figure:: _images/ldm_architecture.png
   :alt: Arquitectura de Stable Diffusion.
