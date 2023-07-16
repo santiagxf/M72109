@@ -11,6 +11,16 @@ Introducción
 
 Conceptualmente, los grandes modelos de lenguaje no se desprenden de la idea de :doc:`language-models` que vimos hasta el momento. Los mismos modelan la ditribución probabilística de una secuencia de palabras o tokens. Sin embargo, la diferencia en su eficacia radica en la palabra **grandes**. Las arquitecturas basadas en :doc:`transformers` han demostrado disponer de una amplia capacidad para modelar complejas distribuciones de datos. Esta capacidad hizo que, disponiendo de suficiente capacidad de procesamiento y de suficiente cantidad de datos, los modelos puedan escalar en terminos de la cantidad de parámetros que utilizan. Más aún, se demostró empiricamente que dada una misma arquitectura de modelo, la cantidad de parámetros es proporcional a las habilidades que podemos ver que el modelo exhibe.
 
+Características
+~~~~~~~~~~~~~~~
+Los grandes modelos de lenguaje se diferencian de los modelos de lenguaje tradicionales en una característica que los hace muy distintos al utilizar en la práctica. Estos modelos (en general) no requieren un proceso de fine-tuning para adaptor a otro domonio. Los mismos pueden generalizar facilmente para resolver otro tipo de problemas distintos a los que fueron originalmente entrenados.
+
+En general, econtraremos 3 tipos de modelos de lenguaje:
+
+:Secuencia-a-secuencia: Introdujimos este concepto en :doc:`seq2seq` y corresponden a la implementación original de la arquitectura de transformers. Estos modelos son capaces de tomar una secuencia de tokens como entrada y producir otra como salida.
+:Autoencoding: Los modelos de secuencia-a-secuencia suelen ser complejos para las tareas de generación de texto ya que es dificil saber la longitud de la secuencia que se va a generar. 
+:Autoregresivos: Son modelos que predicen un token o palabra a la vez. Cuando necesitan generar una secuencia de palabras, entonces este proceso se ejecuta multiples veces. Estos modelos, como la familia de los modelos GPT, resultan prácticos para la tarea de generación de texto.
+
 Conjunto de datos
 -----------------
 Como mencionamos, los grandes modelos de lenguaje disponen de una cantidad elvada de parámetros. Poder estimar estos parámetros eficientemente require de un conjunto de datos acorde. Por ejemplo, el modelo LLaMA (entrenado por Meta en Febrero 2023), es un modelo con variantes que van desde los 7 mil millones (billones en inglés) a los 65 mil millones de parámeteros. Este modelo fué entrenado con un conjunto de datos de 1.2 billon (trillon en inglés) de tokens.
