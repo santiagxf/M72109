@@ -22,7 +22,7 @@ Una deferencia fundamental entre los modelos para NLP y visión rádica en la fo
 Embeddings
 ----------
 
-Una imagen de dimensiones HxW resulta en :math:`N = HW / {P ^ 2}` tokens de tamaño PxP. Cada uno de estos parches entonces resulta en un token el cual es representado en un espacio vectorial de dimension D. Cada parche de 2 dimensiones es transformado a 1 dimensión, la cual el modelo puede utilizar para aprender un mapeo a un espacio latente *D* que es constante en toda la arquitectura. Los embeddings en la dimensión *D* se los conoce como __patch embeddings__.
+Una imagen de dimensiones HxW resulta en :math:`N = HW / {P ^ 2}` tokens de tamaño PxP. Cada uno de estos parches entonces resulta en un token el cual es representado en un espacio vectorial de dimension D. Cada parche de 2 dimensiones es transformado a 1 dimensión, la cual el modelo puede utilizar para aprender un mapeo a un espacio latente *D* que es constante en toda la arquitectura. Los embeddings en la dimensión *D* se los conoce como **patch embeddings**.
 
 Finalmente, se adjunta sobre cada *path embedding* información posicional sobre cada uno de los parches que sirven para identificar la posición del mismo. 
   
