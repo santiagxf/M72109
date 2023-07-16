@@ -11,7 +11,7 @@ Existe una nueva generación de modelos que están cambiando drasticamente la pe
 
   *Número de parámetros en cada uno de los últimos modelos de lenguaje para NLP (2021).*
 
-Esto incluso ha hecho que se diseñen nuevas formas de medir la performance de un modelo de un modelo de NLP. La tradición métrica `General Language Understanding Evaluation (GLUE) <https://gluebenchmark.com/>`, la cual mide la performance de un modelo de NLP sobre 9 diferentes tareas que miden diferentes aspectos del lenguaje sobre diversos conjuntos de datos y con distintas dificultades, dejó de ser útil cuando T5 en 2020 supero la linea base que puede alcanzar una persona. Esto hizo que se debiera generar una nueva métrica, SuperGLUE la cula trata de medir tareas más complejas como lógica, entendimiento del sentido común y la semántica léxica.
+Esto incluso ha hecho que se diseñen nuevas formas de medir la performance de un modelo de un modelo de NLP. La tradición métrica `General Language Understanding Evaluation (GLUE) <https://gluebenchmark.com/>`_ , la cual mide la performance de un modelo de NLP sobre 9 diferentes tareas que miden diferentes aspectos del lenguaje sobre diversos conjuntos de datos y con distintas dificultades, dejó de ser útil cuando T5 en 2020 supero la linea base que puede alcanzar una persona. Esto hizo que se debiera generar una nueva métrica, SuperGLUE la cula trata de medir tareas más complejas como lógica, entendimiento del sentido común y la semántica léxica.
 
 .. figure:: _images/stateof_glue.png
   :alt: GLUE y SuperGLUE para diferentes modelos. Fuente: stateof.ai.
