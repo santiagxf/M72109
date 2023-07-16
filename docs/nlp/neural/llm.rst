@@ -56,3 +56,4 @@ Más precisamente, RLHF es una técnica que entrena un "modelo de recompensa" di
    :hidden:
 
    LLM como zero-shot learners <zero_shot_classification.ipynb>
+   Few-shot learning <few_shot_classification.ipynb>
