@@ -65,7 +65,11 @@ Los modelos neurales solucionan muchos de los problemas mencionados anteriorment
 
 Aquí, la entrada de la red neural es una secuencia de *k* palabras :math:`w _ {1:k}` y la salida es la distribución probabilistica para la siguiente palabra de la secuencia. :math:`w _ {1:k}` es tratado como una ventana de palabras que definen el contexto para cada palabra *w*, siendo cada una de ellas representada por un vector (embedding). El contexto :math:`w _ {1:k}` es la concatenación de los *k* vectores de cada palabra.
 
-La forma típica de entrenar estos modelos es utilizando la arquitectura :ref:`rst-encoder-decoder`:
+En general, econtraremos 3 tipos de modelos de lenguaje:
+
+:Secuencia-a-secuencia: Introdujimos este concepto en :doc:`seq2seq` y corresponden a la implementación más tradicional de modelos de lenguaje. Estos modelos son capaces de tomar una secuencia de tokens como entrada y producir otra como salida.
+:Autoencoding: Los modelos de secuencia-a-secuencia suelen ser complejos para las tareas de generación de texto ya que es dificil saber la longitud de la secuencia que se va a generar. Los modelos de lenguaje basados en autoencoding funcionan de forma similar a los autoencoders en el sentido de que son entrenados para reconstruir instancias de datos que han sido alteradas. Modelos como BERT, el cual veremos mas adelante, setán basados en esta ténica. 
+:Autoregresivos: Son modelos que predicen un token o palabra a la vez. Cuando necesitan generar una secuencia de palabras, entonces este proceso se ejecuta multiples veces. Estos modelos, como la familia de los modelos GPT, resultan prácticos para la tarea de generación de texto.
 
 .. figure:: ../_images/rnn_encoder_decoder.png
   :alt: Arquitectura de RNN de tipo encoder-decoder.
