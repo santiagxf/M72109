@@ -31,4 +31,5 @@ Los modelos neurales para el procesamiento de audio, ya sean utilizando secuenci
    :caption: En esta sección veremos
 
    Modelos basados en espectogramas <spectogram>
+   Modelos basados en embeddings <embedding>
    Modelos de industria <cognitive-services.ipynb>
