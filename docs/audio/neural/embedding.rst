@@ -1,7 +1,7 @@
 Modelos basados en embeddings
 =============================
 
-Los modelos basados en aprendizaje profundo se benefician de grandes cantidades de datos de entrenamiento. Sin embargo, disponibilizar datos etiquetados para aprendizaje supervisado es  mucho más dificil de conseguir que los datos sin etiquetar. Es por esto que los grandes avances en aprendizaje profundo se han dado principalmente cuando se dispone de mecanismos de aprendiaje no supervisado. Los sistemas actuales de reconocimiento de voz requieren miles de horas de habla transcrita para alcanzar un rendimiento aceptable que no es disponible para la gran mayoría de los casi 7.000 idiomas que se hablan en todo el mundo. Aprender puramente de ejemplos etiquetados no se parece a la adquisición del lenguaje en personas: los bebés aprenden el lenguaje escuchar a los adultos que los rodean, un proceso que requiere aprender buenas representaciones del lenguaje hablado.
+Los modelos basados en aprendizaje profundo se benefician de grandes cantidades de datos de entrenamiento. Sin embargo, disponibilizar datos etiquetados para aprendizaje supervisado es  mucho más dificil de conseguir que los datos sin etiquetar. Es por esto que los grandes avances en aprendizaje profundo se han dado principalmente cuando se dispone de mecanismos de aprendiaje no supervisado. Muchos modelos de reconocimiento de voz requieren miles de horas de habla transcrita para alcanzar un rendimiento aceptable, lo cual complejida su entrenamiento.
 
 Idea
 ----
