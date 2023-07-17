@@ -11,12 +11,18 @@ Dado que este conjunto de unidades es finito, el modelo no puede representar tod
 
 Arquitectura
 -------------
-En esta arquitectura, el modelo comienzar por codificar el audio a través de una red neuronal convolucional multicapa. El audio es procesado, en el caso de wav2vec, en parches de 25 ms. Estos embeddings son luego procesados por un modelo basado en la arquitectura transformer para construir representaciones contextualizadas. Sin embargo, los embeddings son emascarados antes de enviarlos al modelo transformer. Alrededor del 50% de los embeddings son enmascarados. El modelo entonces utiliza la información de toda la secuencia para reconstruir la entrada (predecir aquellos embeddings que fueron enmascarados) utilizando Constrastive Learning. Note que hasta aquí, la arquitectura es bastante similar a el modo de entrenamiento de BERT.
+En esta arquitectura, el modelo comienzar por codificar el audio a través de una red neuronal convolucional multicapa. El audio es procesado, en el caso de wav2vec[1]_ , en parches de 25 ms. Estos embeddings son luego procesados por un modelo basado en la arquitectura transformer para construir representaciones contextualizadas. Sin embargo, los embeddings son emascarados antes de enviarlos al modelo transformer. Alrededor del 50% de los embeddings son enmascarados. El modelo entonces utiliza la información de toda la secuencia para reconstruir la entrada (predecir aquellos embeddings que fueron enmascarados) utilizando Constrastive Learning. Note que hasta aquí, la arquitectura es bastante similar a el modo de entrenamiento de BERT.
 
 Una particularidad de esta arquitectura es que la capa de transformer recibe como entrada los embeddings provenientes de la capa convolucional. Sin embargo, debe reconstuir *unidades de audio*. Las unidades de audio son generadas a traves de un proceso de **quantizer** que elije una unidad de discretización que también es aprendida en conjunto por el modelo y que dependerá de las características del audio.
 
-Wav2vec 2.0: Learning the structure of speech from raw audio
-https://ai.meta.com/blog/wav2vec-20-learning-the-structure-of-speech-from-raw-audio/
+.. figure:: ../_images/wav2vec2-speech-unit.png
+  :alt: Arquitecture de wav2vec2
+
+  *Arquitecture de wav2vec 2.0*
+
+**Referencias**
+
+.. [1] `Wav2vec 2.0: Learning the structure of speech from raw audio <https://ai.meta.com/blog/wav2vec-20-learning-the-structure-of-speech-from-raw-audio/>`_
 
 .. toctree::
    :maxdepth: 1
