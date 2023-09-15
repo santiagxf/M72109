@@ -103,7 +103,6 @@ class TweetTextNormalizer(TextNormalizer):
                          language=language,
                          lemmatize=lemmatize,
                          stem=stem,
-                         reduce_len=reduce_len,
                          strip_stopwords=strip_stopwords,
                          strip_urls=strip_urls,
                          strip_accents=strip_accents,
