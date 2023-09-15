@@ -3,7 +3,7 @@ import base64
 import json
 import time
 
-class CognitiveServicesPronAssesment():
+class CognitiveServicesPronunciationAssesment():
     # a common wave header, with zero audio length
     # since stream data doesn't contain header, but the API requires header to fetch format information, so you need post this header as first chunk for each query
     WAVE_HEADER_16K_16BIT_MONO = bytes([ 82, 73, 70, 70, 78, 128, 0, 0, 87, 65, 86, 69, 102, 109, 116, 32, 18, 0, 0, 0, 1, 0, 1, 0, 128, 62, 0, 0, 0, 125, 0, 0, 2, 0, 16, 0, 0, 0, 100, 97, 116, 97, 0, 0, 0, 0 ])

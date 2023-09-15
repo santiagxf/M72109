@@ -23,12 +23,15 @@ LANGUAGE_MODULES = {
 
 class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     """Un normalizador de texto pensado para procesamiento de texto en multiples idiomas. Este normalizador puede devolver o bien un texto transformado o bien una
-    secuencia de tokens si se indica el parametro `text_to_sequence`. Dentro de los procesamientos disponibles son lemmatization, stemming, reducir la longitud
+    secuencia de tokens si se indica el parametro `return_tokens`. Dentro de los procesamientos disponibles son lemmatization, stemming, reducir la longitud
     de caracteres repetidos, eliminar URLs y eliminar mayusculas."""
     
-    def __init__(self, tokenizer:TokenizerI, language:str='spanish', lemmatize:bool=True, stem:bool=False, strip_stopwords:bool=True, 
-                 strip_urls:bool=True, strip_accents=True, token_min_len:int=-1, preserve_case:bool=True, text_to_sequence:bool=False):
+    def __init__(self, tokenizer:TokenizerI, language:str = 'spanish', lemmatize:bool=True, stem:bool = False, strip_stopwords:bool = True, 
+                 strip_urls:bool = True, strip_accents:bool = True, token_min_len:int = -1, preserve_case:bool = True, return_tokens:bool = False):
         self.tokenizer = tokenizer
+
+        assert lemmatize and stem == False, "Utilize `lematize=True` o `stem=True`, pero no ambos."
+        assert language in LANGUAGE_MODULES.keys(), f"`language` debe ser alguno de los siguientes valores: {LANGUAGE_MODULES.keys()}"
         
         if stem:
             self.stemmer = nltk.stem.SnowballStemmer(language=language) # Creamos un steammer
@@ -54,7 +57,7 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
         self.strip_urls = strip_urls
         self.urls_regex = re.compile('http\S+') # Usamos una expresion regular para encontrar las URLs
         self.token_min_len = token_min_len
-        self._text_to_sequence = text_to_sequence
+        self._return_tokens = return_tokens
     
     def process_text(self, text):
         """Procesa una secuencia de texto de acuerdo a la configuración del normalizador. Este método
@@ -82,7 +85,7 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
         return self
 
     def transform(self, X):
-        if self._text_to_sequence:
+        if self._return_tokens:
             for doc in X:
                 yield self.process_text(text=doc)
         else:
@@ -90,10 +93,10 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
                 yield ' '.join(self.process_text(text=doc))
 
 class TweetTextNormalizer(TextNormalizer):
-    def __init__(self, language:str='spanish', lemmatize:bool=True, stem:bool=False, reduce_len:bool=True, strip_handles:bool=True, strip_stopwords:bool=True,
-                 strip_urls:bool=True, strip_accents:bool=True, token_min_len:int=-1, preserve_case:bool=True, text_to_sequence:bool=False):
+    def __init__(self, language:str = 'spanish', lemmatize:bool = True, stem:bool = False, reduce_len:bool = True, strip_handles:bool = True, strip_stopwords:bool = True,
+                 strip_urls:bool = True, strip_accents:bool = True, token_min_len:int = -1, preserve_case:bool = True, return_tokens:bool = False):
         """Un normalizador de texto pensado para procesamiento de Tweets en multiples idiomas. Este normalizador puede devolver o bien un texto transformado o bien
-        una secuencia de tokens si se indica el parametro `text_to_sequence`. Dentro de los procesamientos disponibles son lemmatization, stemming, reducir la
+        una secuencia de tokens si se indica el parametro `return_tokens`. Dentro de los procesamientos disponibles son lemmatization, stemming, reducir la
         longitud de caracteres repetidos, eliminar handles, eliminar URLs, eliminar mayusculas."""
         
         super().__init__(TweetTokenizer(strip_handles=strip_handles, reduce_len=reduce_len, preserve_case=preserve_case),
@@ -106,5 +109,5 @@ class TweetTextNormalizer(TextNormalizer):
                          strip_accents=strip_accents,
                          token_min_len=token_min_len,
                          preserve_case=preserve_case,
-                         text_to_sequence=text_to_sequence
+                         return_tokens=return_tokens
                         )

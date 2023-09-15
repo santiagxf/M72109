@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+# +
+# ME72: Maestría en Métodos Cuantitativos para la Gestión y Análisis de Datos
+# M72109: Analisis de Datos no Estructurados
+# Universidad de Buenos Aires - Facultad de Ciencias Economicas (UBA-FCE)
+# Año: 2020
+# Profesor: Facundo Santiago, Javier Ignacio Garcia Fronti
+# -
+
 import torch
 import numpy as np
 from transformers.data.processors.utils import InputFeatures
@@ -44,4 +52,3 @@ class RegressionDataset(torch.utils.data.Dataset):
 
     def __len__(self):
         return self.batch_size
-
