@@ -12,6 +12,7 @@ import spacy
 import re
 import sklearn
 import nltk
+import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize.casual import TweetTokenizer
 from nltk.tokenize.api import TokenizerI
@@ -30,7 +31,7 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
                  strip_urls:bool = True, strip_accents:bool = True, token_min_len:int = -1, preserve_case:bool = True, return_tokens:bool = False):
         self.tokenizer = tokenizer
 
-        assert lemmatize and stem == False, "Utilize `lematize=True` o `stem=True`, pero no ambos."
+        assert not (lemmatize and stem), "Utilize `lematize=True` o `stem=True`, pero no ambos."
         assert language in LANGUAGE_MODULES.keys(), f"`language` debe ser alguno de los siguientes valores: {LANGUAGE_MODULES.keys()}"
         
         if stem:
@@ -85,12 +86,14 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
         return self
 
     def transform(self, X):
+        results = np.ndarray(shape=(len(X)), dtype=object)
         if self._return_tokens:
-            for doc in X:
-                yield self.process_text(text=doc)
+            for idx, doc in enumerate(X):
+                results[idx] = self.process_text(text=doc)
         else:
-            for doc in X:
-                yield ' '.join(self.process_text(text=doc))
+            for idx, doc in enumerate(X):
+                results[idx] = ' '.join(self.process_text(text=doc))
+        return results
 
 class TweetTextNormalizer(TextNormalizer):
     def __init__(self, language:str = 'spanish', lemmatize:bool = True, stem:bool = False, reduce_len:bool = True, strip_handles:bool = True, strip_stopwords:bool = True,
