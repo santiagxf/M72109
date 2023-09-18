@@ -50,9 +50,9 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
     
 
         # Agregamos una representacion para las palabras que no estan en el vocabulario
-        self.embeddings.add(self.UNKNOWN_WORD_TOKEN, (np.random.rand(self.embeddings.vector_size) - 0.5) / 5.0)
+        self.embeddings.add_vector(self.UNKNOWN_WORD_TOKEN, (np.random.rand(self.embeddings.vector_size) - 0.5) / 5.0)
         
-        self.vocab_size = len(self.embeddings.vocab)
+        self.vocab_size = len(self.embeddings.key_to_index)
         self.emdedding_size = self.embeddings.vector_size
         self._sequence_to_idx = sequence_to_idx
         
@@ -81,7 +81,7 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
         
         # Construirmos la matriz manualmente
         wv_matrix = (np.random.rand(self.vocab_size, self.emdedding_size) - 0.5) / 5.0
-        for word in tqdm(self.embeddings.vocab):
+        for word in tqdm(self.embeddings.key_to_index):
             try:
                 wv_matrix[self.word2idx(word)] = self.get_vector(word)
             except:
@@ -101,9 +101,9 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
             palabra desconocida `UNKNOWN_WORD_TOKEN`.
         """
         try:
-            return self.embeddings.wv.vocab[word].index
+            return self.embeddings.key_to_index[word]
         except KeyError:
-            return self.embeddings.wv.vocab[self.UNKNOWN_WORD_TOKEN].index
+            return self.embeddings.key_to_index[self.UNKNOWN_WORD_TOKEN]
     
     def idx2word(self, idx: int) -> str:
         """
@@ -115,7 +115,7 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
             Palabra de la cual buscar el índice. Si la palabra no existe, devuelve el índice de la
             palabra desconocida `UNKNOWN_WORD_TOKEN`.
         """
-        return self.embeddings.wv.index2word[idx]
+        return self.embeddings.index_to_key[idx]
     
     def sequence_to_text(self, seqs: List[int]) -> str:
         """
@@ -132,12 +132,14 @@ class Word2VecVectorizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMix
         return self
 
     def transform(self, X):
+        results = []
         if (self._sequence_to_idx):
-            for doc in X:
-                yield [self.word2idx(token) for token in doc]
+            for doc in tqdm(X):
+                results.append([self.word2idx(token) for token in doc])
         else:
-            for doc in X:
-                yield [self.get_vector(token) for token in doc]
+            for doc in tqdm(X):
+                results.append([self.get_vector(token) for token in doc])
+        return results
 
 class PadSequenceTransformer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     def __init__(self, max_len: int=None, padding: str="pre"):
@@ -152,7 +154,7 @@ class PadSequenceTransformer(sklearn.base.BaseEstimator, sklearn.base.Transforme
             Longitud máxima que debe tener la secuencia. Secuencias de texto con mayor longitud son truncadas.
             Secuencias de menor longitud son completadas utilizando padding.
         padding: str
-            La strategia de padding a utilizar: `pre` (padding se agrega al comienzo de la secuencia) o `pos`
+            La strategia de padding a utilizar: `pre` (padding se agrega al comienzo de la secuencia) o `post`
             (padding se agrega al final de la secuencia).
         """
         self.max_len = max_len

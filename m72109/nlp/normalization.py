@@ -13,6 +13,7 @@ import re
 import sklearn
 import nltk
 import numpy as np
+from tqdm import tqdm
 from nltk.corpus import stopwords
 from nltk.tokenize.casual import TweetTokenizer
 from nltk.tokenize.api import TokenizerI
@@ -88,10 +89,10 @@ class TextNormalizer(sklearn.base.BaseEstimator, sklearn.base.TransformerMixin):
     def transform(self, X):
         results = np.ndarray(shape=(len(X)), dtype=object)
         if self._return_tokens:
-            for idx, doc in enumerate(X):
+            for idx, doc in tqdm(enumerate(X), total=len(X)):
                 results[idx] = self.process_text(text=doc)
         else:
-            for idx, doc in enumerate(X):
+            for idx, doc in tqdm(enumerate(X), total=len(X)):
                 results[idx] = ' '.join(self.process_text(text=doc))
         return results
 
