@@ -4,8 +4,8 @@ pandas
 numpy
 matplotlib
 tqdm
-spacy==2.3.5
+spacy
 unidecode
 scikit-learn
-gensim==3.8.3
+gensim
 importlib-metadata==4.13.0
