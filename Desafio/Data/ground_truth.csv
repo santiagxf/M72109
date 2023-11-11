@@ -1,4 +1,4 @@
-﻿movie_name,start(sec),end(sec),sequence_name,Neutral (1)_Typical (0),nb_annotations,memorability_score,memorabable
+﻿movie_name,start(sec),end(sec),sequence_name,Neutral (1)_Typical (0),nb_annotations,memorability_score,memorable
 127 hours,2000,2010,127_hours_2000_2010_1,0,5,1,1
 127 hours,2182,2192,127_hours_2182_2192_5,1,8,0,0
 127 hours,271,281,127_hours_271_281_1,1,4,0.75,1
