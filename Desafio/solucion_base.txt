@@ -12,3 +12,4 @@ matplotlib
 pandas
 numpy
 scipy
+eli5
