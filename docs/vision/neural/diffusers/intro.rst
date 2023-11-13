@@ -95,7 +95,7 @@ Los modelos generativos en general tienen dos modalidades de generación:
 :No condicionadas: El proceso de generación no está guiado ni condicionado por de ninguna forma más que por el scheduler que orquestra el proceso.
 :Condicionadas: El proceso de generación está condicionado durante su proceso de *denoising*. El modelo debe generar una muestra en cada paso *t*, la cual está condicionada al modificar el estado interno del modelo generativo.
 
-En :doc:`code/ddpm.ipynb` revisaremos un ejemplo de un modelo *no condicionado*. Veremos que, si bien produce imagenes, su utilidad es relativamente baja ya que estos modelos requieren estar entrenados especificamente en un determinado dominio para generar imagenes que correspondan al mismo. De lo contrario, dada la extremadamente alta variabilidad dentro de la distribución de posibles imagenes, el proceso de generación de imagenes no genera algun tipo de contenido más específico.
+En :ref:`code/ddpm.ipynb` revisaremos un ejemplo de un modelo *no condicionado*. Veremos que, si bien produce imagenes, su utilidad es relativamente baja ya que estos modelos requieren estar entrenados especificamente en un determinado dominio para generar imagenes que correspondan al mismo. De lo contrario, dada la extremadamente alta variabilidad dentro de la distribución de posibles imagenes, el proceso de generación de imagenes no genera algun tipo de contenido más específico.
 
 El proceso de generación puede ser condicionado de multiples formas:
 
@@ -104,7 +104,7 @@ El proceso de generación puede ser condicionado de multiples formas:
 - Condicionado por texto y una imagen incial.
 - Condicionado por audio.
 
-Los hoy en día populares :doc:`code/stable_diffusion.ipynb` son un tipo de *conditioned diffusion models*. Estas arquitecturas conectan el modelo UNet con un modelo basado en transformers que le permite condicionarlo por información que es almacenada en tokens.
+Los hoy en día populares :ref:`code/stable_diffusion.ipynb` son un tipo de *conditioned diffusion models*. Estas arquitecturas conectan el modelo UNet con un modelo basado en transformers que le permite condicionarlo por información que es almacenada en tokens.
 
 
 Latent Diffusion Models
