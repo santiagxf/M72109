@@ -10,10 +10,6 @@ sphinx:
   builder: html
   configuration: docs/conf.py
 
-# Optionally build your docs in additional formats such as PDF
-formats:
-  - pdf
-
 build:
   os: ubuntu-22.04
   tools:
