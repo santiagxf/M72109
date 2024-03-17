@@ -8,7 +8,7 @@ En las arquitecturas neurales basadas en aprendizaje profundo, por el contrario,
 .. figure:: ../_images/architecture_deep_learning.png
   :alt: Aprendiaje profundo
 
-Estos modelos están basados en el concepto de :doc:`representations` y sus arquitecturas están basadas principales en estructuras específicas que condicionan la forma en la que la red aprende. Estas estructuras son principalmente una :doc:`cnn`.
+Estos modelos están basados en el concepto de :doc:`representations` y sus arquitecturas están basadas principales en estructuras específicas que condicionan la forma en la que la red aprende. Estas estructuras son principalmente una :doc:`cnn/intro`.
 
 .. toctree::
    :maxdepth: 2
