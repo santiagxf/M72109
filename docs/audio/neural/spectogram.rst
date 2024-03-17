@@ -24,7 +24,7 @@ Para entender mejor cómo se descompone un sonido en diferentes armónicos, resu
 
 
 El espectrograma
----------------
+----------------
 
 Hasta el momento, siemple hemos visto las ondas de sonido representadas en el domino del tiempo, es decir, con el eje X representando el tiempo. Una forma alternativa de representar la misma información es graficar la amplitud de la onda vs las diferentes frecuencias en las que el sonido está descompuesto. Esto describiría el sonido en un momento particular del tiempo.
 
