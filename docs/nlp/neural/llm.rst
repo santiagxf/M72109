@@ -50,3 +50,4 @@ Más precisamente, RLHF es una técnica que entrena un "modelo de recompensa" di
    :hidden:
 
    Few-shot learning <few_shot_classification.ipynb>
+   Modelos entrenados para chat <chat_completions_slm.ipynb>
