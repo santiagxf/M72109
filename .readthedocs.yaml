@@ -15,6 +15,9 @@ build:
   tools:
     python: "3.9"
 
+format:
+  - pdf
+
 # Optionally set the version of Python and requirements required to build your docs
 python:
   install:
