@@ -48,10 +48,7 @@ Gestión y análisis de datos no estructurados
    :maxdepth: 1
    :caption: Trabajos prácticos
 
-   Actividad 1: Modelado clásico <nlp/classic/topic-modeling-activity.ipynb>
-   Actividad 2: Modelos basados en secuencias con Word2Vec <nlp/neural/sequences-activity.ipynb>
-   Actividad 3: Modelos de detección de objectos <vision/neural/cnn/detection/code/object_detection.ipynb>
-   Trabajo Final <practice/Memorabilidad.ipynb>
+   Actividades <practice/intro>
 
 
 ..
