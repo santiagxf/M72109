@@ -21,7 +21,7 @@ Un modelo multimodal es un modelo que puede utilizarse para procesar datos proce
 
 En general, estos modelos comienzan con multiples entradas y modelos que procesan una sola modalidad. Las salidas de estos modelos unimodales son en general embeddings que se fusionan entonces mediante una estrategia dada. La estrategia de fusión puede ser temprana, tardía o híbrida, dependiendo de que tan temprano o tarde la información es combinada en un único espacio latente.
 
-.. figure:: ../_images/multimodal_fusion.png
+.. figure:: ../_images/multimodal_fusion.jpg
   :alt: Modelos multimodales
 
 Modelos y conjuntos de datos multimodales
