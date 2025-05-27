@@ -36,6 +36,10 @@ Los modelos multimodales, entonces, también tienen asociadas tareas especificas
 :Image captioning: Analiza una dada imagen y genera un texto que describe el entendimiento de la misma.
 :Image grounding: Permite conectar el uso del lenguaje con determinadas regiones de una imágen. Por ejemplo, dado una imagen y un texto "manzana mordida", el modelo retornaria el área de la imagen donde se encuentra el objeto.
 :Visual question-answering: Permite responder preguntas sobre una determinada imagen. Es decir, dada una imagen y una pregunta, el modelo retorna la respuesta a la pregunta basandose en la información de la imágen.
+:Text-to-image generation: Permite generar una imagen a partir de una descripción en texto. Difusores son un ejemplo de estos modelos. También existe su variación *text-image-to-image* los cuales toman un par de imagen-texto y generan otra imagen a partir de las mismas. Técnicas de restauración o de edición de imagenes por ejemplo pueden entrar en esta categoría.
+:Audio-text generation: Estos modelos permite generar texto o audio a partir de texto o audio. Son populares en sistemas basados en chat.
+
+.. note:: Modelos de *text-to-speech* (tts) o *speech-to-text* en general no suelen denominarse modelos multimodales, a pesar de entrar dentro de la definición.
 
 Modelos vs sistemas
 ~~~~~~~~~~~~~~~~~~~
