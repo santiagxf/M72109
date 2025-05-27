@@ -27,9 +27,15 @@ En general, estos modelos comienzan con multiples entradas y modelos que procesa
 Modelos y conjuntos de datos multimodales
 -----------------------------------------
 
-Cada modalidad suele tener diferentes tareas relacionadas a la misma. A lo largo de este curso, hemos visto varios casos de estas tareas. Por ejemplo, para la modalidad de imagenes, tareas como clasificación de imagenes, segmentación, detección, etc. Los modelos suelen estar diseñados para completar una tarea en particular, por lo cual un modelo esta atado a una tarea en paricular.
+Los modelos suelen estar diseñados para completar una tarea en particular, por lo cual un modelo esta atado a una tarea en paricular. Cada modalidad suele tener diferentes tareas relacionadas a la misma. A lo largo de este curso, hemos visto varios casos de estas tareas. Por ejemplo, para la modalidad de imagenes, tareas como clasificación de imagenes, segmentación, detección, etc.
 
 .. note:: En este contexto, es importante remarcar la capacidad de algunos modelos de realizar ::doc::`../nlp/neural/few_shot_classification`. Estos modelos siguen estando entrenados para realizar una tarea en particular, sin embargo, la versatilidad de sus datos de entrada y salida les permite ser utilizados para generar predicciones de otras tareas. 
+
+Los modelos multimodales, entonces, también tienen asociadas tareas especificas, las cuales son también denominadas *multimodales*. Ejemplos son:
+
+:Image captioning: Analiza una dada imagen y genera un texto que describe el entendimiento de la misma.
+:Image grounding: Permite conectar el uso del lenguaje con determinadas regiones de una imágen. Por ejemplo, dado una imagen y un texto "manzana mordida", el modelo retornaria el área de la imagen donde se encuentra el objeto.
+:Visual question-answering: Permite responder preguntas sobre una determinada imagen. Es decir, dada una imagen y una pregunta, el modelo retorna la respuesta a la pregunta basandose en la información de la imágen.
 
 Modelos vs sistemas
 ~~~~~~~~~~~~~~~~~~~
