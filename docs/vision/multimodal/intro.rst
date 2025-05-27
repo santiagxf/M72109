@@ -6,7 +6,7 @@ Modelos multimodales
 
 Una *modalidad* se traduce como un medio o forma en lo que **algo** existe o es ejecutado. La idea de que "algo existe en una o varias modalidades" hace referencia a que sean cuales sean los atributos que definen la existencia de un objeto (o idea), este objeto puede ser persivido a traves de estas modalidades. La totalidad de la información almacenada en *algo* es entonces la sumatoria de la información de cada una de las modalidades.
 
-.. figure:: _images/multimodal_elephant.png
+.. figure:: ../_images/multimodal_elephant.png
   :alt: Modelos multimodales
 
   *Creditos de la imagen: https://huggingface.co/learn/computer-vision-course/en/unit4/multimodal-models/a_multimodal_world*
