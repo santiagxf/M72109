@@ -37,3 +37,4 @@ BLIP
    :glob:
 
    CLIP <clip.ipynb>
+   BLIP <blip.ipynb>
