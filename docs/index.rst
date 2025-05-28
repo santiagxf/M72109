@@ -33,6 +33,7 @@ Gestión y análisis de datos no estructurados
    Introducción <vision/intro>
    Procesamiento de imágenes <vision/preprocessing/intro>
    Modelos neurales <vision/neural/intro>
+   Modelos multimodales <vision/multimodal/intro>
    Modelos neurales para video <vision/video/intro>
    Estado del arte <vision/state-of-the-art>
 
