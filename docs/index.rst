@@ -39,13 +39,6 @@ Gestión y análisis de datos no estructurados
 
 .. toctree::
    :maxdepth: 1
-   :caption: Modelos multimodales
-
-   Introducción <vision/multimodal/intro>
-   Modelos de vision-lenguage <vision/multimodal/vlp>
-
-.. toctree::
-   :maxdepth: 1
    :caption: Procesamiento de audio
 
    Introducción <audio/intro>
