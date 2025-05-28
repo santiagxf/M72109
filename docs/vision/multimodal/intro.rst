@@ -29,7 +29,7 @@ Modelos y conjuntos de datos multimodales
 
 Los modelos suelen estar diseñados para completar una tarea en particular, por lo cual un modelo esta atado a una tarea en paricular. Cada modalidad suele tener diferentes tareas relacionadas a la misma. A lo largo de este curso, hemos visto varios casos de estas tareas. Por ejemplo, para la modalidad de imagenes, tareas como clasificación de imagenes, segmentación, detección, etc.
 
-.. note:: En este contexto, es importante remarcar la capacidad de algunos modelos de realizar ::doc::`../nlp/neural/few_shot_classification`. Estos modelos siguen estando entrenados para realizar una tarea en particular, sin embargo, la versatilidad de sus datos de entrada y salida les permite ser utilizados para generar predicciones de otras tareas. 
+.. note:: En este contexto, es importante remarcar la capacidad de algunos modelos de realizar ::doc::`../../nlp/neural/few_shot_classification`. Estos modelos siguen estando entrenados para realizar una tarea en particular, sin embargo, la versatilidad de sus datos de entrada y salida les permite ser utilizados para generar predicciones de otras tareas. 
 
 Los modelos multimodales, entonces, también tienen asociadas tareas especificas, las cuales son también denominadas *multimodales*. Ejemplos son:
 
