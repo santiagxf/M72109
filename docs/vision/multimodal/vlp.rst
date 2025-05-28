@@ -44,6 +44,16 @@ Vimos que las arquitecturas basadas en transformers requieren grandes conjuntos 
 
 BLIP introdujo un mecanismo de filtrado (CapFilt). Este se compone de un modelo de aprendizaje profundo que filtra las muestras ruidosas y otro modelo que crea subtítulos para las imágenes. Ambos modelos se ajustan primero utilizando un conjunto de datos anotado manualmente. La limpieza del conjunto de datos con CapFit produjo un rendimiento superior al del conjunto de datos web.
 
+Arquitectura
+~~~~~~~~~~~~
+
+La arquitectura BLIP combina varios componentes que hemos visto anteriormente:
+
+:Vision Transformer (ViT):
+:Text Encoder: Similar al que vimos con la arquitectura de  BERT, codifica el texto para el modelo.
+:Image-Grounded Text Encoder: Este componente particularmente es nuevo en este curso, aunque su idea es simple. Combina la información del texto con la información de la imagen dentro del espacio de embeddings, generando asi una representación latente multimodal.
+:Image-Grounded Text Decoder: Se trata del componente homologo al encoder anterior. Este decoder es entrenado via una función de perdida de cross-entropy de forma autoregresiva para resolver tareas de generación de texto como podria ser generación de subtitulos o generación de texto como respuestas a preguntas (visual-question answering).
+
 .. toctree::
    :maxdepth: 1
    :caption: Ejemplos
