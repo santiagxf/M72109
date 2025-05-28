@@ -48,3 +48,10 @@ Como último punto, es importarte poder diferenciar los sistemas de software de 
 
 Un modelo multimodal no es equivalente a un sistema multimodal (compuesto de multiples modelos unimodales). La diferencia aqui radica que un modelo multimodal a sido entrado especificamente para resolver la tarea utilizando multiples modalidades. Por el contrario, un sistema multimodal esta computesto por multiples modelos que realizan tareas de forma independiente que luego son combinadas para resolver la tarea final.
 
+.. toctree::
+   :maxdepth: 2
+   :caption: En esta sección
+   :hidden:
+
+   Vision-language transformers <vlp>
+
