@@ -33,7 +33,7 @@ BLIP
 
 .. toctree::
    :maxdepth: 2
-   :caption: En esta sección
-   :hidden:
+   :caption: Ejemplos
+   :glob:
 
    CLIP <clip.ipynb>
