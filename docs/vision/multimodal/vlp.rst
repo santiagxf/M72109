@@ -29,3 +29,11 @@ BLIP
 ----
 
 `BLIP (Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation) <https://arxiv.org/abs/2201.12086>`_ es un método de preentrenamiento que busca unificar la comprensión visual y lingüística mediante el aprovechamiento de un conjunto de datos a gran escala de pares imagen-texto. El proceso de preentrenamiento se inicia mediante un modelo de lenguaje para generar texto para imágenes (sin su texto correspondiente), y luego utiliza este texto generado para ajustar el modelo con el conjunto de datos original. Este enfoque permite que el modelo aprenda tanto de datos etiquetados como sin etiquetar, lo que resulta en un mejor rendimiento en diversas tareas de visión y lenguaje, como la creación de subtítulos de imágenes.
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: En esta sección
+   :hidden:
+
+   CLIP <clip.ipynb>
