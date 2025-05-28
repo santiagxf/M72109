@@ -20,6 +20,13 @@ CLIP es capaz de generalizar más alla de las imagenes que posee en su conjunto 
 
 La técnica de entrenamiento de CLIP esta basada en **Constrastive Learning**. Para más información sobre esta técnica y como se implementa puede ver `Contrastive Learning: Effective Anomaly Detection with Auto-Encoders <https://santiagof.medium.com/contrastive-learning-effective-anomaly-detection-with-auto-encoders-98c6e1a78ada>`_
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Ejemplos
+   :glob:
+
+   CLIP <clip.ipynb>
+
 GroupViT
 --------
 
@@ -28,13 +35,18 @@ GroupViT
 BLIP
 ----
 
-`BLIP (Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation) <https://arxiv.org/abs/2201.12086>`_ es un método de preentrenamiento que busca unificar la comprensión visual y lingüística mediante el aprovechamiento de un conjunto de datos a gran escala de pares imagen-texto. El proceso de preentrenamiento se inicia mediante un modelo de lenguaje para generar texto para imágenes (sin su texto correspondiente), y luego utiliza este texto generado para ajustar el modelo con el conjunto de datos original. Este enfoque permite que el modelo aprenda tanto de datos etiquetados como sin etiquetar, lo que resulta en un mejor rendimiento en diversas tareas de visión y lenguaje, como la creación de subtítulos de imágenes.
+Modelos como CLIP mostraron el inmenso potencial de los conjuntos de datos más grandes y el aprendizaje contrastivo (constrastive learning) en el aprendizaje profundo. Un avance significativo en este ámbito es`BLIP (Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation) <https://arxiv.org/abs/2201.12086>`_ que amplía las capacidades de los modelos multimodales para incluir la generación de texto.
 
+Idea
+~~~~
+
+Vimos que las arquitecturas basadas en transformers requieren grandes conjuntos de datos para entrenarse. A menudo es necesario extraer estos conjuntos de datos de internet utilizando pares de imágenes y texto alternativo (alt-text). Sin embargo, los textos alternativos no suelen describir con precisión el contenido visual de las imágenes, lo que los convierte en una señal ruidosa, insuficiente para el aprendizaje de la alineación entre visión y lenguaje. 
+
+BLIP introdujo un mecanismo de filtrado (CapFilt). Este se compone de un modelo de aprendizaje profundo que filtra las muestras ruidosas y otro modelo que crea subtítulos para las imágenes. Ambos modelos se ajustan primero utilizando un conjunto de datos anotado manualmente. La limpieza del conjunto de datos con CapFit produjo un rendimiento superior al del conjunto de datos web.
 
 .. toctree::
    :maxdepth: 1
    :caption: Ejemplos
    :glob:
 
-   CLIP <clip.ipynb>
    BLIP <blip.ipynb>
