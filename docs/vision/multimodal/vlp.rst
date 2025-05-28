@@ -13,7 +13,7 @@ Arquitectura
 
 CLIP es capaz de generalizar más alla de las imagenes que posee en su conjunto de datos de entrenamiento gracias al contexto que le aporta el texto de las mismas. Esto hace que CLIP sea capaz de extraer representaciones de imagenes utilizando la descripción textual de la misma a pesar de nunca haber visto una imágen tal cual se describe. Esto lo vuelve extremadamente potente para la búsqueda semántica de imágenes.
 
-.. figure:: _images/state_clip_constrastive.png
+.. figure:: ../_images/state_clip_constrastive.png
   :alt: Arquitectura general del modelo CLIP y su uso de la técninca Contrastive Learning.
 
   *Arquitectura general del modelo CLIP y su uso de la técninca Contrastive Learning* [4]_
