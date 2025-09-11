@@ -3,7 +3,6 @@ pandas
 numpy
 matplotlib
 tqdm
-spacy==2.3.5
 unidecode
 scikit-learn
 importlib-metadata==4.13.0
