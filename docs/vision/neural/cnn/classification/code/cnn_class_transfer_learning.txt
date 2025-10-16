@@ -1,5 +1,4 @@
-tensorflow==2.15.0
-keras==2.15.0
+tensorflow
 tensorflow-datasets
 tensorflow-hub
 matplotlib
