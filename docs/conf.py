@@ -84,8 +84,9 @@ nbsphinx_prolog = """
     <td>
     <a style="border-radius: 8px;
       box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+      background-color: var(--readthedocs-flyout-background-color);
       font-size: 14px;
-      color: #202124;
+      color: var(--readthedocs-flyout-item-link-color);
       padding: 8px 14px;
       transition: box-shadow 0.2s;
       display: flex;
@@ -96,8 +97,9 @@ nbsphinx_prolog = """
         <td>
     <a style="border-radius: 8px;
       box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+      background-color: var(--readthedocs-flyout-background-color);
       font-size: 14px;
-      color: #202124;
+      color: var(--readthedocs-flyout-item-link-color);
       padding: 8px 14px;
       transition: box-shadow 0.2s;
       display: flex;
