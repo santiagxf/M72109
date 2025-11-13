@@ -1,3 +1,4 @@
+gensim
 tensorflow
 tensorflow-datasets
 tensorflow-hub
