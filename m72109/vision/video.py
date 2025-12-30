@@ -73,8 +73,9 @@ def classify_video(image_processor: BaseImageProcessor, model: PreTrainedModel, 
         with torch.no_grad():
             outputs = model(**inputs)
             logits = outputs.logits
-            predicted_prob = torch.nn.functional.softmax(torch.max(logits), dim=-1).item()
-            predicted_label = logits.argmax(-1).item()
+            probs = torch.softmax(logits, dim=-1)
+            predicted_label = probs.argmax(dim=-1).item()
+            predicted_prob = probs[0, predicted_label].item()
         
         predictions.append({
             "frames": [i, i + chunk_size],
