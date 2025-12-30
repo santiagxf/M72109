@@ -2,9 +2,48 @@ from typing import List, Dict, Tuple, Any
 from transformers.modeling_utils import PreTrainedModel
 from transformers.modeling_utils import BaseImageProcessor
 
+import cv2
 import numpy as np
 import tqdm as tqdm
 import torch
+
+def load_video_frames(video_path: str) -> np.ndarray:
+    """
+    Carga los frames de un video en un array de NumPy.
+    
+    Args:
+        video_path: Ruta al video.
+    
+    Returns:
+        Un array de NumPy con los frames del video de deimensiones (frames, channels, height, width)
+    """
+    
+    cap = cv2.VideoCapture(video_path)
+    frames = []
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret: break
+        frames.append(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+    cap.release()
+    
+    # Utilizamos `np.moveaxis` ya que Torch espera las imagenes que sean channel first.
+    # (frames, 3, 406, 720) -> (frames, 3, 406, 720)
+    return np.moveaxis(np.asarray(frames), 3, 1)
+
+def embed_video(image_processor: BaseImageProcessor, model: PreTrainedModel, frames: np.ndarray, chunk_size: int = 16, stride: int = 8) -> torch.Tensor:
+    embedding_sequence = []
+    
+    for i in tqdm(range(0, len(frames) - chunk_size + 1, stride)):
+        chunk = frames[i : i + chunk_size]
+        
+        inputs = image_processor(list(chunk), return_tensors="pt").to(model.device)
+        
+        with torch.no_grad():
+            outputs = model(**inputs)
+            chunk_embedding = outputs.last_hidden_state.mean(dim=1)
+            embedding_sequence.append(chunk_embedding)
+
+    return torch.cat(embedding_sequence, dim=0)
 
 def classify_video(image_processor: BaseImageProcessor, model: PreTrainedModel, frames: np.ndarray, chunk_size: int = 16, stride: int = 8) -> List[Dict[str, Any]]:
     """
