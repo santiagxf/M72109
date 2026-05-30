@@ -52,9 +52,3 @@ Gestión y análisis de datos no estructurados
 
    Procesamiento de documentos <document-understanding/intro>
 
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Procesamiento de documentos
-
-   Introducción <document-understanding/intro>
