@@ -37,7 +37,7 @@ Podemos pensar el componente de retrieval como una memoria externa. El LLM no ne
 Embeddings y similitud
 ----------------------
 
-Para recuperar documentos usamos embeddings, es decir, vectores densos que representan el significado de un texto. Si dos fragmentos hablan de temas parecidos, esperamos que sus vectores estén cerca.
+Para recuperar documentos usamos embeddings, es decir, vectores densos que representan el significado de un texto. En este caso no nos interesan solamente embeddings de palabras, sino representaciones de oraciones, párrafos o fragmentos completos; esta idea se desarrolla con más detalle en :doc:`sentence-embeddings`. Si dos fragmentos hablan de temas parecidos, esperamos que sus vectores estén cerca.
 
 Una medida común es la similitud coseno:
 
