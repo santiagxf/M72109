@@ -76,10 +76,10 @@ Aunque el ejemplo mínimo puede implementarse como "buscar los textos más parec
 
 Una advertencia importante es que RAG no garantiza respuestas correctas por sí solo. Si el recuperador trae fragmentos irrelevantes, el generador probablemente responderá mal. Por eso suele decirse que la calidad de un sistema RAG está limitada por la calidad de su retrieval.
 
-Ejemplo mínimo
---------------
+Ejemplos prácticos
+------------------
 
-El notebook de esta sección implementa el núcleo del patrón sin depender de servicios externos ni credenciales. Usaremos un modelo de embeddings de Sentence Transformers disponible en HuggingFace, construiremos un índice pequeño en memoria y recuperaremos los fragmentos más relevantes para una pregunta.
+Los notebooks de esta sección avanzan de forma incremental. Primero implementaremos el núcleo del patrón sin depender de servicios externos ni credenciales. Luego construiremos un ejemplo un poco más cercano a una arquitectura productiva: chunking con metadatos, índice documental y un SLM que responde usando los fragmentos recuperados.
 
 .. toctree::
    :maxdepth: 1
@@ -94,4 +94,5 @@ Referencias
 
 - `Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks <https://arxiv.org/abs/2005.11401>`_.
 - `Sentence Transformers en HuggingFace <https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2>`_.
+- `LlamaIndex <https://docs.llamaindex.ai/>`_.
 - `Tutorial de RAG en LangChain <https://python.langchain.com/docs/tutorials/rag/>`_.
