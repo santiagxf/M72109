@@ -21,4 +21,5 @@ En este módulo vamos a introducir dos ideas centrales:
    :caption: En esta sección veremos
 
    Modelos de procesamiento de documentos <document-processing-models>
+   Embeddings de oraciones y documentos <sentence-embeddings>
    Retrieval-Augmented Generation para documentos <rag>
