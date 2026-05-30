@@ -3,5 +3,3 @@ matplotlib
 pillow
 pydantic
 mistralai
-transformers
-
