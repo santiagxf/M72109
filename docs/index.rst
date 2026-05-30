@@ -52,5 +52,5 @@ Gestión y análisis de datos no estructurados
 
    Introducción <document-understanding/intro>
    Modelos de procesamiento de documentos <document-understanding/document-processing-models>
-   Retrieval-Augmented Generation para documentos <document-understanding/rag>
+   Retrieval-Augmented Generation <document-understanding/rag>
 
