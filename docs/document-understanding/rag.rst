@@ -87,6 +87,7 @@ El notebook de esta sección implementa el núcleo del patrón sin depender de s
    :glob:
 
    RAG mínimo con embeddings <rag-minimo.ipynb>
+   RAG con índice documental y un SLM <rag-index-slm.ipynb>
 
 Referencias
 -----------
