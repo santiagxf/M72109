@@ -15,11 +15,3 @@ En este módulo vamos a introducir dos ideas centrales:
 
 .. note::
    Podemos pensar este módulo como un puente entre NLP, visión por computadora y sistemas de búsqueda. El objetivo no es reemplazar lo visto anteriormente, sino combinarlo para resolver problemas donde la información está distribuida en documentos extensos o visualmente estructurados.
-
-.. toctree::
-   :maxdepth: 1
-   :caption: En esta sección veremos
-
-   Modelos de procesamiento de documentos <document-processing-models>
-   Embeddings de oraciones y documentos <sentence-embeddings>
-   Retrieval-Augmented Generation para documentos <rag>
