@@ -51,7 +51,6 @@ Gestión y análisis de datos no estructurados
    :caption: Entendimiento de documentos
 
    Introducción <document-understanding/intro>
-   Embeddings de oraciones y documentos <document-understanding/sentence-embeddings>
    Modelos de procesamiento de documentos <document-understanding/document-processing-models>
    Retrieval-Augmented Generation para documentos <document-understanding/rag>
 
