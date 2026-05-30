@@ -106,6 +106,7 @@ Ejemplos
    :glob:
 
    Document question answering con HuggingFace <document-question-answering.ipynb>
+   OCR avanzado para documentos empresariales <advanced-ocr-enterprise.ipynb>
 
 Referencias
 -----------
