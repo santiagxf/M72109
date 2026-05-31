@@ -1,6 +1,7 @@
 llama-index
 llama-index-readers-file
 llama-index-embeddings-huggingface
+llama-index-llms-huggingface
 sentence-transformers
 transformers
 torch
