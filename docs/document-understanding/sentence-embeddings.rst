@@ -169,22 +169,6 @@ Algunas decisiones prácticas suelen tener mucho impacto:
 :Actualización:
    Si cambia el modelo de embeddings, usualmente hay que recalcular los vectores del índice.
 
-Conexión con RAG
-----------------
-
-En un pipeline RAG, los sentence embeddings y document embeddings son el puente entre una consulta en lenguaje natural y una colección de documentos. La consulta se transforma en un vector, cada chunk del corpus ya tiene su vector, y el sistema recupera los más cercanos.
-
-Podemos resumirlo así:
-
-#. Dividir documentos en chunks.
-#. Generar embeddings para cada chunk.
-#. Guardarlos en un índice vectorial.
-#. Generar un embedding para la pregunta.
-#. Recuperar los chunks más similares.
-#. Entregar esos chunks al modelo generativo como contexto.
-
-La calidad de este paso determina gran parte de la calidad final del sistema. Si el embedding no captura bien la intención de la pregunta o el significado de los fragmentos, el LLM recibirá contexto incorrecto. Por eso, antes de mejorar el prompt o cambiar el modelo generativo, muchas veces conviene revisar la estrategia de embeddings y retrieval.
-
 Referencias
 -----------
 
