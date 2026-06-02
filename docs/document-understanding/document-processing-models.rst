@@ -4,7 +4,7 @@ Modelos de procesamiento de documentos
 Introducción
 ------------
 
-Un documento no es solamente texto. Si observamos una factura, por ejemplo, encontramos palabras, números, encabezados, tablas, firmas, sellos y regiones visuales que organizan la información. A grandes rasgos, el problema de procesamiento de documentos consiste en convertir esa representación visual en información útil para una tarea: extraer campos, clasificar documentos, responder preguntas o validar datos.
+Un documento no es solamente texto. Si observamos una factura, por ejemplo, encontramos palabras, números, encabezados, tablas, firmas, sellos y regiones visuales que organizan la información. A grandes rasgos, el problema de procesamiento de documentos consiste en convertir esa representación visual en información útil para una tarea: extraer campos, clasificar documentos o validar datos.
 
 El pipeline clásico solía dividirse en pasos bien separados:
 
@@ -48,7 +48,7 @@ Existen varias familias de modelos para procesamiento de documentos. La diferenc
    Procesan directamente la imagen del documento y generan texto estructurado. Donut (*Document Understanding Transformer*) es un ejemplo importante: evita depender de un motor OCR externo y formula muchas tareas como generación de secuencias.
 
 :Modelos multimodales generales:
-   Modelos vision-language más recientes pueden analizar imágenes de documentos, responder preguntas o razonar sobre regiones visuales. Suelen ser potentes, pero también más costosos y dependientes de instrucciones o prompts bien diseñados.
+   Modelos vision-language más recientes pueden analizar imágenes de documentos o razonar sobre regiones visuales. Suelen ser potentes, pero también más costosos y dependientes de instrucciones o prompts bien diseñados.
 
 LayoutLM y la idea de embeddings espaciales
 -------------------------------------------
@@ -64,25 +64,6 @@ Por eso, un modelo layout-aware puede combinar:
 
 Esto permite que el modelo aprenda patrones como "un valor ubicado a la derecha de una etiqueta suele ser su contenido" o "las palabras alineadas verticalmente pueden pertenecer a una columna".
 
-Document question answering
----------------------------
-
-Una tarea muy útil para introducir estos modelos es *document question answering*. Dado un documento y una pregunta, el modelo debe responder usando la información visible en la página. Por ejemplo:
-
-.. code::
-
-   Pregunta: ¿Cuál es el total de la factura?
-   Respuesta: $128.40
-
-Esta tarea resulta pedagógica porque combina varias capacidades:
-
-#. Leer texto del documento.
-#. Entender la pregunta.
-#. Localizar la región relevante.
-#. Extraer o generar la respuesta.
-
-En la práctica, HuggingFace Transformers ofrece pipelines y modelos pre-entrenados para experimentar con esta tarea. Algunos usan OCR y layout, mientras que otros, como Donut, trabajan directamente sobre la imagen.
-
 Advertencias prácticas
 ----------------------
 
@@ -92,7 +73,7 @@ Advertencias prácticas
 Algunas preguntas útiles antes de elegir un enfoque son:
 
 - ¿El documento es nativamente digital o escaneado?
-- ¿Necesitamos extraer campos exactos o responder preguntas generales?
+- ¿Necesitamos extraer campos exactos o sintetizar información general?
 - ¿El layout es estable o cambia frecuentemente?
 - ¿Podemos usar OCR externo o necesitamos un modelo OCR-free?
 - ¿Tenemos ejemplos anotados para hacer fine-tuning?
@@ -105,7 +86,6 @@ Ejemplos
    :caption: Ejemplos
    :glob:
 
-   Document question answering con HuggingFace <document-question-answering.ipynb>
    OCR avanzado para documentos empresariales <advanced-ocr-enterprise.ipynb>
 
 Referencias
@@ -113,4 +93,3 @@ Referencias
 
 - `LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking <https://arxiv.org/abs/2204.08387>`_.
 - `Donut: Document Understanding Transformer without OCR <https://arxiv.org/abs/2111.15664>`_.
-- `Document Question Answering en HuggingFace Transformers <https://huggingface.co/docs/transformers/tasks/document_question_answering>`_.
